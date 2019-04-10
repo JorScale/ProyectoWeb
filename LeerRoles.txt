@@ -1,0 +1,37 @@
+
+# +Aqui pueden ver el modulo que les corresponde a cada uno ,ademas dentro de cada modulo ya
+ esta la pagina codigo.php dentro de la carpeta ya esta descargado bootstrap (CARPETAS CSS y JS) para 
+que las agreguen el link en sus modulos.
+  + Si usan iconos agreguenlos en la carpeta de iconos  lo mismo para las imagenes dentro de la carpeta imagenes.
+#
+
+
+1-Administrar-Solicitudes( Wilberth).
+
+2-Administrar-Usuarios(Andres).
+
+3-Home (Francisco).
+
+4-Politicas(Francisco).
+
+5-Perfil(Jerson).
+
+6-Editar-Perfil(Jerson).
+
+7-Solicitar-Vacaciones(Juan Carlos).
+
+8-Login(Ashley).
+
+9-Control(Ashley).
+
+10-Restablecer-Clave(Katherine).
+
+11-Registrar-Usuario(Rodrigo).
+
+12-Vacaciones-Proporcionales(Rodrigo).
+
+13-Historial-Mensual(Gabriel).
+
+14-Historial-Individual(Julio).
+
+15-Historial-General(Jorddy).
