@@ -92,6 +92,10 @@ header li a.nav-link:hover{
 	color: blue;
 }
 
+#tramitesPagina h2{
+	text-align: left;
+}
+
 footer ul li {
 	background-color:  #091951;
 	display: inline;
