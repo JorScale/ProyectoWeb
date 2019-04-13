@@ -3,35 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home </title>
+    <title>Politicas de privacidad </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<link rel="shortcut icon" href="../Iconos/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../Iconos/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
-    <header>
+   <header>
           <nav class="navbar navbar-expand-md sticky-top " role="navigation">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="collapseMenu"> <i class="fas fa-bars fa-1x"></i></span>
         </button>
-        
         <article class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav pull-xs-left " >
                 <li class="nav-item">
-                    <a href="#" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
+                    <a href="../Home/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" title="" class="nav-link"><i class="fas fa-home"> Solicitar </i></a>
+                    <a href="#" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" title="" class="nav-link"><i class="fas fa-home"> Historial </i></a>
+                    <a href="#" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
                 </li>
                </ul>
 
@@ -50,26 +52,34 @@
         </article>
     </nav>
 
-        <a href="http://utn.ac.cr" target="_blank" title=""><img src="Imagenes/UTN.png" alt="UTN" id="logo"></a>
+        <a href="http://utn.ac.cr" target="_blank" title="Pagina oficial de la UTN"><img src="../Imagenes/UTN.png" alt="UTN" class="ImgEnlaces"></a>
+
+        <a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title="Avatar de la UTN"><img src="../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
+
     </header><!-- /header -->
 
 <nav id="NavAdministrador">
     <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Registrar usuario</a>
+    <a class="nav-link " href="../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link " href="#">Administrar solicitudes</a>
+  <a class="nav-link" href="../Administracion/Aministrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link " href="#">Anulación de vacaciones</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link " href="#">Registro de boletas</a>
-  </li>
+ 
    <li class="nav-item">
     <a class="nav-link " href="#">Administrar usuarios</a>
   </li>
+    <li class="nav-item">
+    <a class="nav-link " href="../Administracion/Historial-General/index.html">Historial general</a>
+  </li> 
+
+   <li class="nav-item">
+    <a class="nav-link " href="#">Reporte mensual</a>
+  </li> 
 </ul>
 </nav>
 
@@ -77,45 +87,40 @@
         <aside id="MenuLateral" class="col-sm-2">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Contacto</a>
+                  <a class="nav-link active" href="#"> <i class="far fa-address-book"> Contacto </i></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Calendario</a>
+                  <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> <script>   
+                    var f = new Date();
+                    document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+                    </script> </i></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Mensajes</a>
+                  <a class="nav-link" href="#"><i class="far fa-envelope"> Notificaciones</i> </a>
                 </li>
             </ul>
         </aside>
         <section  class="col-sm-8">
             <h1 align="center">
-                TRAMITES DE LA PAGINA
+                Politicas de privacidad y uso
             </h1><!-- /header -->
-            <article>
-                <h2 style="text-align: left"><a href="#">Solcitud de vacaciones</a></h2>
-                <p>desde esta opcion puedes llenar el formulario para solicitar vacaciones</p>
-            </article>
-            <article>
-                <h2 style="text-align: left"><a href="">Informacion personal</a></h2>
-                <p>desde esta opcion puedes revisar tu informacion personal o editar datos incorrectos</p>
-            </article>
-            <article>
-                <h2 style="text-align: left"><a href="">Historial de vacaciones</a></h2>
-                <p>desde esta opcion puede observar las fechas de vacaciones anteriores</p>
+               <p>&nbsp;</p><p>El presente Política de Privacidad establece los términos en que Universidad Técnica Nacional usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta institución está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p><p><strong>Información que es recogida</strong></p><p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,&nbsp; información de contacto como&nbsp; su dirección de correo electrónico o número teléfonico. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún trámite en el sitio.</p><p><strong>Uso de la información recogida</strong></p><p>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios y mejorar nuestros servicios. &nbsp;Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con información que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.</p><p>Universidad Tecnica Nacional está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.</p><p><strong>Cookies</strong></p><p>Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico web, y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas las web pueden reconocerte individualmente y por tanto brindarte el mejor servicio personalizado de su web.</p><p>Nuestro sitio web emplea las cookies para poder identificar las páginas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede eliminar las cookies en cualquier momento desde su ordenador. Sin embargo las cookies ayudan a proporcionar un mejor servicio de los sitios web, estás no dan acceso a información de su ordenador ni de usted, a menos de que usted así lo quiera y la proporcione directamente, visitas a una web </a>. Usted puede aceptar o negar el uso de cookies, sin embargo la mayoría de navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio web. También usted puede cambiar la configuración de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.</p><p><strong>Enlaces a Terceros</strong></p><p>Este sitio web pudiera contener en laces a otros sitios que pudieran ser de su interés. Una vez que usted de clic en estos enlaces y abandone nuestra página, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los términos o privacidad ni de la protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted está de acuerdo con estas.</p><p><strong>Control de su información personal</strong></p><p>En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.&nbsp; </p><p>Esta institución no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p><p>Universidad Técnica Nacional Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            </article>
         </section>
     </section>
     <br> <br>
-    <footer class="fixed-bottom">
-    	<h4 class="text-center font-weight-bold" id="copy">&copy utn </h4>
+
+  <footer>
+      <ul>
+        <li>
+         <h6><a href="#">Politicas de uso</a></h6>
+      </li>
+
+      <li>
+        <h6 id="copy">&copy uTn </h6>
+      </li>
+      </ul>
+       
     </footer>
 </body>
 
