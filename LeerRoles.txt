@@ -22,7 +22,7 @@ que las agreguen el link en sus modulos.
 
 8-Login(Ashley).
 
-9-Control(Ashley).
+9-Anulación-vacaciones(Ashley).
 
 10-Restablecer-Clave(Katherine).
 
