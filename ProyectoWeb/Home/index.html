@@ -93,7 +93,10 @@
                   <a class="nav-link active" href="#"> <i class="far fa-address-book"> Contacto </i></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> Calendario </i></a>
+                  <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> <script>   
+                    var f = new Date();
+                    document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+                    </script> </i></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"><i class="far fa-envelope"> Notificaciones</i> </a>
@@ -103,7 +106,7 @@
         <section  class="col-sm-8" id="tramitesPagina">
             <h1 align="center">
                 TRAMITES DE LA PAGINA
-            </h1>
+            </h1><!-- /header -->
             <article>
                 <h2 ><a href="#">Solcitud de vacaciones</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -148,7 +151,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </ul>
        
     </footer>
-    
+
 </body>
 
 </html>
