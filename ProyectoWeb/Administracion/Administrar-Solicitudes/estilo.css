@@ -1,0 +1,45 @@
+
+
+#btnDenegarAdmSol {
+	margin: 1px;
+	text-align: center;
+	background: red; 
+	padding: 2px;
+	width: 60px;
+	height: 30px;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+#btnAceptarAdmSol {
+	margin: 1px;
+	text-align: center;
+	background: green; 
+	padding: 2px;
+	width: 60px;
+	height: 30px;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+#btnImprimir {
+	margin: 1px;
+	text-align: center;
+	padding: 2px;
+	width: 60px;
+	height: 30px;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+.modal-header {
+	background: lightgray;
+}
+
+.Opcion {
+	width: 185px;
+}
+
+
+
+
