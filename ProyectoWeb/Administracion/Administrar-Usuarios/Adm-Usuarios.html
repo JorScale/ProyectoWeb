@@ -15,10 +15,6 @@
 
 <link rel="shortcut icon" href="../../Iconos/favicon.ico" type="image/x-icon">
 <link rel="icon" href="../../Iconos/favicon.ico" type="image/x-icon">
-<!-- Link para agregar Datetime Picker -->
-<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-<script src="js/bootstrap-datetimepicker.min.js"></script>
-</head>
 
 <body>
     <header>
@@ -46,7 +42,7 @@
                     </a>
                     <article class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="perfil.html">Perfil</a>
-                        <a class="dropdown-item" href="#">Cuenta</a>
+                        <a class="dropdown-item" href="#">Editar Perfil</a>
                         <a class="dropdown-item" href="#">Cerra sesion</a>
                     </article>
                 </li>
@@ -66,21 +62,21 @@
     <a class="nav-link " href="../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
   </li>
   <li class="nav-item">
-  <a class="nav-link" href="../Administracion/Aministrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
+  <a class="nav-link" href="../Aministrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link " href="#">Anulación de vacaciones</a>
   </li>
  
    <li class="nav-item">
-    <a class="nav-link " href="#">Administrar usuarios</a>
+    <a class="nav-link disabled" href="#">Administrar usuarios</a>
   </li>
     <li class="nav-item">
     <a class="nav-link " href="../Historial-General/index.html">Historial general</a>
   </li> 
 
    <li class="nav-item">
-    <a class="nav-link " href="#">Reporte mensual</a>
+    <a class="nav-link " href="../reporte-mensual/index.html">Reporte mensual</a>
   </li> 
 </ul>
 </nav>
@@ -179,7 +175,7 @@
     <footer>
       <ul>
         <li>
-         <h6><a href="#">../../Politicas de uso</a></h6>
+         <h6><a href="../../Politicas/index.html">Politicas de uso</a></h6>
       </li>
 
       <li>
@@ -203,7 +199,7 @@ Script cambiar de color boton
 <script>
       bot =document.getElementById('btnElimTodos');
       if (bot.disabled==true) {
-      	
+        
       }
     </script>
 <!--
@@ -271,11 +267,9 @@ Script para habilitar botn de eliminar todos
     -->
     <script>
       var control = 0;
-
 $(":checkbox").click(function(){
     if (this.checked) control++;
     else control--;
-
     if (control > 0) $("#btnElimTodos").prop("disabled", false);
     else $("#btnElimTodos").prop("disabled", true);
 });
