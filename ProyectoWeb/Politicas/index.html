@@ -83,22 +83,25 @@
 </nav>
 
     <section class="container-fluid">
-        <aside id="MenuLateral" class="col-sm-2">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#"> <i class="far fa-address-book"> Contacto </i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> <script>   
-                    var f = new Date();
-                    document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-                    </script> </i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="far fa-envelope"> Notificaciones</i> </a>
-                </li>
-            </ul>
-        </aside>
+  <aside id="MenuLateral" class="col-sm-2">
+   <ul class="nav flex-column">
+       <li class="nav-item">
+         <a class="nav-link active" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+     <i class="far fa-address-book"> Contacto </i> </a>
+    <article class="collapse" id="collapseExample">
+      <article class="card card-body">
+       <b>2668 3500 ext(5032)</b>
+       </article>
+      </article>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> <script>   
+          var f = new Date();
+          document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+         </script> </i></a>
+      </li>  
+   </ul>
+ </aside> 
         <section  class="col-sm-8">
             <h1 align="center">
                 Politicas de privacidad y uso
