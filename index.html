@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RRHH| Login</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/> <!--bootstrap-->
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'/> <!--iconos-->
+	<link rel="stylesheet" href="css/estiloLogin.css"/> <!--css personal-->
+	<link rel="shortcut icon" href="https://www.utn.ac.cr/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+</head>
+<body>
+		<header id="header-container" class="p-4 mb-2 text-light container-fluid">
+			<section class="main row">
+				
+				<section class="d-none d-md-block col-md-6 col-lg-6"> <!--columna1-->
+					<img src="Imagenes/UTNlogo.png" class="img-fluid">
+				</section>
+				
+
+				<section class="input-group col-sm-5 col-md-2 col-lg-2"><!--columna2-->
+					<section>
+					    	<section class="input-group mb-1">
+					        	<section class="input-group-prepend">
+					          		<div class="input-group-text">
+					          			<i class='input-group'><img src="Iconos/login.png" alt="cedula"></a></i>
+					          		</div>
+						 			<input id="Cedula" type="text" class="form-control" name="Cedula" placeholder="Identificación"/>
+								</section>
+							</section>
+					</section>
+				</section>
+				
+				<section class='input-group col-sm-5 col-md-3 col-lg-2'><!--columna3-->
+					<section>
+					      <section class="input-group">
+					        	<section class="input-group-prepend">
+					          		<div class="input-group-text">
+					          			<i class='input-group'><img src="Iconos/bloquear.png" alt="contraseña"> </i>
+					          		</div>
+						 			<input id="password" type="password" class="form-control " name="password" placeholder="Password"/>
+								</section>
+								<span > <a href="Solicita-Contraseña/index.html" id="restablece-contra">¿Olvidaste la contraseña?</a></span>
+							</section>
+					</section>
+				</section>
+
+				<section class="col-sm-1 col-md-2"> <!--columna4-->
+					<a  href="Home/index.html" class="btn btn-success btn-sm"  id="boton">Entrar
+					<span class="fas fa-angle-double-right"></span>
+					 </a>
+				</section>
+			</section>
+		</header>
+
+	<section class="card container" id="form-card">
+		<section class="row">
+			<section class="d-none d-md-block col-md-7"><!--columna1-->
+				<img src="Imagenes/recursos.jpg" id="IMG" class="img-fluid"/>
+			</section>
+
+			<section class="col-sm-12 col-md-5"> <!--columna2-->
+				<header class="card-header w-auto" id="card-header">
+			        <h2>¡Registrate!</h2>
+				</header>	
+					
+			    <article class=" container card-body">
+			        <form name="e" method="post">
+			            <section class="form-group">
+			                <label for="nombre" class="sr-only">Nombre: </label>
+				            <input type="text" class="form-control" placeholder="Nombre" id="nombre"  required title="Digite su nombre">
+				        </section>
+
+						<section class="form-group">
+							<label for="apellidos" class="sr-only">Apellidos: </label>
+							<input type="text" class="form-control" placeholder="Apellidos" id="apellidos"  required title="Digite sus apellidos">
+						</section>
+
+						<section class="form-group">
+							<label for="tipo" class="sr-only">Tipo de Identificación:</label>
+							<select class="form-control" id="tipo" required title="Elija el tipo de identificación" onchange="lol(this.value)">
+								<option value="" selected disabled>Tipo de Identificación</option>
+								<option value="1" >Nacional</option>
+								<option value="2" >Residente</option>
+								<option value="3" >Pasaporte</option>
+							</select>
+				     	</section>
+
+				        <section class="form-group"><!--restricciones-->
+				            <label for="cedula" class="sr-only">Identificación: </label>
+				            <input type="text" class="form-control" placeholder="Identificación" id="cedula" readonly required pattern="[1-9]\d{4}\d{4}" title="Digite el numero de cedula">
+			            </section>
+
+			            <section class="form-group">
+			                <label for="email" class="sr-only">Email: </label>
+			                <input type="email" class="form-control" placeholder="Email" id="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"  required title="Digite el correo: example@Utn.ac.cr">
+			            </section>
+
+			            <section class="form-group">
+			            	<section class="input-group-prepend">
+				                <label for="contraseña" class="sr-only">Contraseña: </label>		
+				                <input type="password" class="form-control" placeholder="Contraseña" id="contraseña"  pattern="[A-Z][a-z][0-9][@#$&*]!?-]{8,12}" minlength="8"required title="Digite una contraseña de 8 caracteres con letras y numeros y un caracter(@#$&*)"/>
+							    <input id="b" value="" class="far fa-eye" type="button" onclick="mostrarContraseña()"/>
+							
+								<script type="text/javascript">
+								function mostrarContraseña(){
+									if(document.getElementById('b').value==''){
+										document.getElementById('contraseña').type='text';
+										document.getElementById('b').value='';
+									}else{
+										document.getElementById('contraseña').type='password';
+										document.getElementById('b').value='';
+									}
+								}
+								</script>
+							</section>
+						 </section>
+									 
+						<button  type="submit" class="btn btn-success btn-md btn-responsive" > Registrarse 
+						   	<span class="fas fa-check"></span>
+						</button>
+				    </form>
+				</article>
+			</section>
+		</section>
+	</section>
+
+	<footer class="container-fluid row">
+
+		<small class="col-3"><a href="Politicas/index.html">Políticas de uso</a></small>
+
+		<small id="foot" class="col-9">
+			Tec. Sistemas Web 2019© Copyright~
+			Icons made by <a href="https://www.flaticon.es/autores/xnimrodx" title="xnimrodx">xnimrodx </a>from <a href="https://www.flaticon.es/" 
+		 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>	
+		</small>
+
+	</footer>
+
+	<link rel="stylesheet" href="js/jquery.js">
+	<link rel="stylesheet" href="js/bootstrap.min.js"><script src="../js/RegistroUsuario.js"  charset="utf-8" async defer></script>
+</body>
+<script >
+	function lol(e){
+            if(e=="1"){
+                document.getElementById("cedula").removeAttribute("readonly");
+            }else if(e=="2" || e=="3"){
+                document.getElementById("cedula").removeAttribute("pattern");
+                document.getElementById("cedula").removeAttribute("readonly");
+            }
+        }   
+</script>
+</html>
