@@ -12,10 +12,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <link rel="shortcut icon" href="../../Iconos/favicon.ico" type="image/x-icon">
 <link rel="icon" href="../../Iconos/favicon.ico" type="image/x-icon">
-
+</head>
 <body>
     <header>
           <nav class="navbar navbar-expand-md sticky-top " role="navigation">
@@ -28,10 +27,10 @@
                     <a href="../../Home/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
+                    <a href="../../Solicitar-Vacaciones/index.html" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
+                    <a href="../../Historial individual/index.html" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
                 </li>
                </ul>
 
@@ -59,7 +58,7 @@
 <nav id="NavAdministrador">
     <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link " href="../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
+    <a class="nav-link " href="../../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
   </li>
   <li class="nav-item">
   <a class="nav-link" href="../Aministrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
@@ -88,11 +87,12 @@
       <colgroup>
       <col style="width: 4%"/>
       <col style="width: 10%"/>
-      <col style="width: 20%"/>
+      <col style="width: 16%"/>
       <col style="width: 12%"/>
-      <col style="width: 20%"/>
+      <col style="width: 16%"/>
       <col style="width: 12%"/>
-      <col style="width: 22%"/>
+      <col style="width: 18%"/>
+      <col style="width: 12%"/>
       </colgroup>
         <thead class="bg-primary text-white">
         <tr>
@@ -102,7 +102,8 @@
         <th class="text-center">Puesto</th>
         <th class="text-center">Departamento</th>
         <th class="text-center">Cargo</th>
-        <th class="text-center">Opciones</th>
+        <th class="text-center">Opciones de Cargo</th>
+        <th class="text-center">Opciones de Usuario</th>
         </tr>
         </thead>
       <tbody id="tabla">
@@ -110,29 +111,65 @@
           <td><input type="checkbox" id="seleccion1"></td>
           <td id="Cédula">115940673</td>
           <td id="Nombre">Andres Alfaro</td>
-          <td id="Puesto">Jefatura</td>
-          <td id="Departamento">Recursos humanos</td>
+          <td>
+            <select name="Puesto">
+            <option value="value1">Administrativo</option> 
+            <option value="value2"selected>Profesor</option>
+            <option value="value3">Jefatura</option>
+            <option value="value4">Chofer</option>
+            </select>
+          </td>
+          <td>
+            <select name="Departamento">
+            <option value="value1">Administración</option> 
+            <option value="value2">Transportes</option>
+            <option value="value3"selected>Docencia</option>
+            </select>
+          </td>
           <td id="Cargo">Administrador</td>
           <td>
             <section class="btn-group mr-2" role="group" aria-label="First group">
               <button id="btnAscender" class="btnAscender btn btn btn-success" type="button">Ascender</button>
                 <button id="btnDegradar" class="btnDegradar btn btn-warning" type="button">Degradar</button>
-                <input type=image src="../../Imagenes/borrar.jpg" id="borrar" class="borrar" width="50" height="50">
               </section>
+            </td>
+            <td id="OpcUsuario">
+              <section class="btn-group mr-2" role="group" aria-label="Second group">
+              <input type=image src="../../Imagenes/borrar.jpg" id="borrar" class="borrar" width="50" height="50">
+              <input type=image src="../../Imagenes/save.png" id="save" class="save" width="50" height="50">
+            </section>
             </td>
         </tr>
         <tr>
           <td><input type="checkbox" id="seleccion1"></td>
           <td id="Cédula" name="Cédula">566643456</td>
           <td id="Nombre" name="Nombre">Carlos</td>
-          <td id="Puesto">Profesor</td>
-          <td id="Departamento">ITI</td>
+          <td>
+            <select name="Puesto">
+            <option value="value1">Administrativo</option> 
+            <option value="value2"selected>Profesor</option>
+            <option value="value3">Jefatura</option>
+            <option value="value4">Chofer</option>
+            </select>
+          </td>
+          <td>
+            <select name="Departamento">
+            <option value="value1">Administración</option> 
+            <option value="value2">Transportes</option>
+            <option value="value3"selected>Docencia</option>
+            </select>
+          </td>
           <td id="Cargo">Usuario</td>
           <td>
             <section class="btn-group mr-2" role="group" aria-label="First group">
               <button id="btnAscender" class="btnAscender btn btn btn-success" type="button">Ascender</button>
                 <button id="btnDegradar" class=" btnDegradar btn btn-warning" type="button">Degradar</button>
-                <input type=image src="../../Imagenes/borrar.jpg" id="borrar" class="borrar" width="50" height="50">
+            </section>
+            </td>
+            <td id="OpcUsuario">
+              <section class="btn-group mr-2" role="group" aria-label="Second group">
+              <input type=image src="../../Imagenes/borrar.jpg" id="borrar" class="borrar" width="50" height="50">
+              <input type=image src="../../Imagenes/save.png" id="save" class="save" width="50" height="50">
             </section>
             </td>
         </tr>
@@ -140,14 +177,32 @@
           <td><input type="checkbox" id="seleccion1"></td>
           <td id="Cédula" name="Cédula">707770777</td>
           <td id="Nombre" name="Nombre">Ashley Barrantes</td>
-          <td id="Puesto">Profesor</td>
-          <td id="Departamento">ITI</td>
+          <td>
+            <select name="Puesto">
+            <option value="value1">Administrativo</option> 
+            <option value="value2" selected>Profesor</option>
+            <option value="value3">Jefatura</option>
+            <option value="value4">Chofer</option>
+            </select>
+          </td>
+          <td>
+            <select name="Departamento">
+            <option value="value1">Administración</option> 
+            <option value="value2">Transportes</option>
+            <option value="value3" selected>Docencia</option>
+            </select>
+          </td>
           <td id="Cargo">Usuario</td>
           <td>
             <section class="btn-group mr-2" role="group" aria-label="First group">
               <button id="btnAscender" class="btnAscender btn btn btn-success" type="button">Ascender</button>
                 <button id="btnDegradar" class=" btnDegradar btn btn-warning" type="button">Degradar</button>
-                <input type=image src="../../Imagenes/borrar.jpg" id="borrar" class="borrar" width="50" height="50">
+            </section>
+            </td>
+            <td id="OpcUsuario">
+              <section class="btn-group mr-2" role="group" aria-label="Second group">
+              <input type=image src="../../Imagenes/borrar.jpg" id="borrar" class="borrar" width="50" height="50">
+              <input type=image src="../../Imagenes/save.png" id="save" class="save" width="50" height="50">
             </section>
             </td>
         </tr>
@@ -155,14 +210,32 @@
           <td><input type="checkbox" id="seleccion1"></td>
           <td id="Cédula" name="Cédula">606660666</td>
           <td id="Nombre" name="Nombre">Francisco</td>
-          <td id="Puesto">Profesor</td>
-          <td id="Departamento">Recursos humanos</td>
+          <td>
+            <select name="Puesto">
+            <option value="value1">Administrativo</option> 
+            <option value="value2"selected>Profesor</option>
+            <option value="value3">Jefatura</option>
+            <option value="value4">Chofer</option>
+            </select>
+          </td>
+          <td>
+            <select name="Departamento">
+            <option value="value1">Administración</option> 
+            <option value="value2">Transportes</option>
+            <option value="value3"selected>Docencia</option>
+            </select>
+          </td>
           <td id="Cargo">Administrador</td>
           <td>
             <section class="btn-group mr-2" role="group" aria-label="First group">
               <button id="btnAscender" class="btnAscender btn btn btn-success" type="button">Ascender</button>
                 <button id="btnDegradar" class=" btnDegradar btn btn-warning" type="button">Degradar</button>
-                <input type=image src="../../Imagenes/borrar.jpg" id="borrar" class="borrar" width="50" height="50">
+            </section>
+            </td>
+            <td id="OpcUsuario">
+              <section class="btn-group mr-2" role="group" aria-label="Second group">
+              <input type=image src="../../Imagenes/borrar.jpg" id="borrar" class="borrar" width="50" height="50">
+              <input type=image src="../../Imagenes/save.png" id="save" class="save" width="50" height="50">
             </section>
             </td>
         </tr>
@@ -182,105 +255,11 @@
         <h6 id="copy">&copy uTn </h6>
       </li>
       </ul>
-       
     </footer>
-
-    <!--
-Script que crea la opcion de buscar en la tabla
-    -->
-<script>
-       $(document).ready(function() {
-    $('#tablaUsuarios').DataTable();
-} );
-    </script>
-    <!--
-Script cambiar de color boton
-    -->
-<script>
-      bot =document.getElementById('btnElimTodos');
-      if (bot.disabled==true) {
-        
-      }
-    </script>
-<!--
-Script para eliminar seleccionados
--->
-    <script type="text/javascript">
-function borrarSele() {
-  tab = document.getElementById('tabla');
-  for (i=tab.getElementsByTagName('input').length-1; i>=0; i--) {
-    chk = tab.getElementsByTagName('input')[i];
-    if (chk.checked)
-      tab.removeChild(chk.parentNode.parentNode);
-  event.preventDefault();
-        $(this).closest('tr').remove();
-  }
-}
-</script>
-
-    <!--
-Script para borrar fila
-    -->
-<script>
-       $(function () {
-    $(document).on('click', '.borrar', function (event) {
-      var mensaje;
-    var usu = $(this).parents("tr").find("td").eq(2).text();
-    var opcion = confirm("Desea eliminar al usuario "+usu+"?");    
-        event.preventDefault();
-    if (opcion == true) {
-        $(this).closest('tr').remove();
-        mensaje = usu+" eliminado de la lista de Usuarios";
-      }else{
-        mensaje = "Eliminacion de usuario "+usu+" cancelada";
-      }
-      alert(mensaje);
-    });
-});
-    </script>
-
-    <!--
-Script para  degradar
-    -->
-     <script>
-$(document).ready(function(){
-$(".btnDegradar").click(function(){
-$(this).parents("tr").find("td").eq(5).html('Usuario');
- });
-});
-</script>
-
-<!--
-Script para Ascender
-    -->
-<script>
-$(document).ready(function(){
-$(".btnAscender").click(function(){
-$(this).parents("tr").find("td").eq(5).html('Administrador');
- });
-});
-</script>
-
-
-<!--
-Script para habilitar botn de eliminar todos
-    -->
-    <script>
-      var control = 0;
-$(":checkbox").click(function(){
-    if (this.checked) control++;
-    else control--;
-    if (control > 0) $("#btnElimTodos").prop("disabled", false);
-    else $("#btnElimTodos").prop("disabled", true);
-});
-    </script>
-<!--
-Script para habilitar botn de eliminar todos
-    -->
-
     <!--datatables-->
  <link rel="stylesheet" href="../DataTables/DataTable/css/jquery.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+<script type="text/javascript" src="filtros.js"></script>
 <!--datatables-->
 </body>
 
