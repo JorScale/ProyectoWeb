@@ -1,0 +1,195 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Solicitud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo.css">
+  <link rel="stylesheet" href="estilo.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../Iconos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="Iconos/favicon.ico" type="image/x-icon">
+    <!--tabla-->
+    <link rel="stylesheet" href="DataTables/DataTable/css/jquery.dataTables.min.css">
+    <!-- botones -->
+    <link rel="stylesheet" href="DataTables/Buttons/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.0/css/select.dataTables.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+         
+
+</head>
+
+<body>
+ 	<section class="container-fluid">
+ 		<form id='form1' class="form-container" method="get" action="#">
+ 			
+ 			<article class="row">
+ 				
+ 				<article class="form-group col-md-1">
+ 					<img src="../../Imagenes/UTN.png" class="img-thumbnail" id="ImgUTN" />
+ 				</article>
+ 				<article class="form-group col-md-10">
+ 					<h3>DIRECCIÓN DE GESTIÓN DE DESARROLLO HUMANO</h3>
+ 					<h3>BOLETA DE SOLICITUD DE VACACIONES</h3>
+ 				</article>
+ 				<article class="form-group col-md-1">
+ 					<label for="Fecha">N° boleta</label>
+ 					<input type="text" class="form-control" id="Fecha" value="120420"readonly>
+ 				</article>
+ 			</article>
+
+ 			<article class="row">
+ 				<article class="form-group col-md-4">
+ 					<label for="Nombre">Nombre</label>
+ 					<input type="text" class="form-control" id="Nombre" readonly>
+ 				</article>
+ 				<article class="form-group col-md-2">
+ 					<label for="Cédula">Cédula</label>
+ 					<input type="text" class="form-control" id="Cédula" readonly>
+ 				</article>
+ 				<article class="form-group col-md-4">
+ 					<label for="Departamento">Departamento</label>
+ 					<input type="text" class="form-control" id="Departamento" readonly>
+ 				</article>
+ 				<article class="form-group col-md-2">
+ 					<label for="Puesto">Puesto</label>
+ 					<input type="text" class="form-control" id="Puesto" readonly>
+ 				</article>
+ 			</article>
+ 			<article class="form-row">
+ 				
+ 			</article>
+ 			<article class="row">
+ 				<article class="form-group col-md-3">
+ 					<label for="FechaSolicitud">Fecha de solicitud</label>
+ 					<input type="text" class="form-control" id="FechaSolicitud" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="FechaInicio">Fecha de inicio</label>
+ 					<input type="text" class="form-control" id="FechaInicio" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="FechaFinal">Fecha de final</label>
+ 					<input type="text" class="form-control" id="FechaFinal" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="FechaRegreso">Fecha de regreso</label>
+ 					<input type="text" class="form-control" id="FechaRegreso" readonly>
+ 				</article>
+ 			</article>
+ 			<article class="form-row">
+ 				<article class="form-group col-md-6">
+ 					<label for="FirmaFunc">Firma del funcionario</label>
+ 					<input type="text" class="form-control" id="FirmaFunc" readonly>
+ 				</article>
+ 				<articlev class="form-group col-md-6">
+ 					<label for="FirmaJefeInm">Firma del jefe inmediato</label>
+ 					<input type="text" class="form-control" id="FirmaJefeInm"" readonly>
+ 				</article>
+ 			</article>
+ 			<article class="form-row">
+ 				<article class="form-group col-md-12">
+ 					<label for="Observaciones">Observaciones</label>
+ 					<br>
+ 					<textarea style="width: 1490px;" readonly=""></textarea>
+ 				</article>
+ 			</article>
+
+			<h3>VACACIONES ADQUIRIDAS</h4>
+			<article class="row">
+ 				<article class="form-group col-md-3">
+ 					<label for="Periodo">Período 1</label>
+ 					<input type="text" class="form-control" id="Periodo" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="DiasDisfrutar">N° de dias a disfrutar</label>
+ 					<input type="text" class="form-control" id="FechaInicio" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="Saldo">Saldo</label>
+ 					<input type="text" class="form-control" id="Saldo" readonly>
+ 				</article>
+ 			</article>
+ 			<article class="row">
+ 				<article class="form-group col-md-3">
+ 					<label for="Periodo">Período 2</label>
+ 					<input type="text" class="form-control" id="Periodo" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="DiasDisfrutar">N° de dias a disfrutar</label>
+ 					<input type="text" class="form-control" id="DiasDisfrutar" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="Saldo">Saldo</label>
+ 					<input type="text" class="form-control" id="Saldo" readonly>
+ 				</article>
+ 			</article>
+ 			<article class="row">
+ 				<article class="form-group col-md-5">
+ 					<label for="Periodo">Día y mes que cumple período</label>
+ 					<input type="text" class="form-control" id="Periodo" readonly>
+ 				</article>
+ 				<article class="form-group col-md-4">
+ 					<label for="DiasDisfrutar">Cantidad de días que adquiere</label>
+ 					<input type="text" class="form-control" id="DiasDisfrutar" readonly>
+ 				</article>
+ 			</article>
+ 			<h3>VACACIONES PROPORCIONALES</h4>
+			<article class="row">
+ 				<article class="form-group col-md-2">
+ 					<label for="Periodo">Período</label>
+ 					<input type="text" class="form-control" id="Periodo" readonly>
+ 				</article>
+ 				<article class="form-group col-md-2">
+ 					<label for="DiasDisfrutar">N° de dias a disfrutar</label>
+ 					<input type="text" class="form-control" id="DiasDisfrutar" readonly>
+ 				</article>
+ 				<article class="form-group col-md-2">
+ 					<label for="Saldo">Saldo</label>
+ 					<input type="text" class="form-control" id="Saldo" readonly>
+ 				</article>
+                <article class="form-group col-md-3">
+                    <label for="FechaInicio">Fecha de inicio</label>
+                    <input type="text" class="form-control" id="FechaInicio" readonly>
+                </article>
+                <article class="form-group col-md-3">
+                    <label for="FechaFinal">Fecha de final</label>
+                    <input type="text" class="form-control" id="FechaFinal" readonly>
+                </article>
+ 			</article>
+ 			<h3>ÁREA DE RECURSOS HUMANOS</h4>
+			<article class="row">
+ 				<article class="form-group col-md-4">
+ 					<label for="Nombre">Nombre</label>
+ 					<input type="text" class="form-control" id="Nombre" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="FirmaFunc">Firma</label>
+ 					<input type="text" class="form-control" id="FirmaFunc" readonly>
+ 				</article>
+ 				<article class="form-group col-md-3">
+ 					<label for="FechaRevision">Fecha de revisión</label>
+ 					<input type="text" class="form-control" id="FechaRevision" readonly>
+ 				</article>
+                <article class="form-group col-md-2">
+                    <label for="FechaRevision">Aprobación de Jefe</label>
+                    <input type="text" class="form-control" id="FechaRevision" value="Pendiente"readonly>
+                </article>
+ 			</article>
+ 		</form>
+            <button type="button" class="btn-primary btn-sm" onclick="window.print();">Imprimir</button>
+            <a href="index.html"><button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button></a>
+ 	</section>
+
+ 	<footer> </footer>
+
+
+ </body>
+ </html>	
