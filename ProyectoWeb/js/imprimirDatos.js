@@ -11,6 +11,22 @@
             elementos[i].addEventListener("click",obtenerValores);
 
         }
+        let elementosA=document.getElementsByClassName("btn-success");
+        for(let i=0;i<elementosA.length;i++)
+        {
+            // cada vez que se haga clic sobre cualquier de los elementos,
+            // ejecutamos la función obtenerValores()
+            elementosA[i].addEventListener("click",AceptarSoli);
+
+        }
+        let elementosD=document.getElementsByClassName("btn-danger");
+        for(let i=0;i<elementosD.length;i++)
+        {
+            // cada vez que se haga clic sobre cualquier de los elementos,
+            // ejecutamos la función obtenerValores()
+            elementosD[i].addEventListener("click",DenegarSoli);
+
+        }
     }
 
     // funcion que se ejecuta cada vez que se hace clic
@@ -30,6 +46,16 @@
             alert("\t Informacion de boleta de solicitud de vacaciones \n\n"+valores);
             
     }
+
+    function AceptarSoli(e) {
+        $(this).parents("tr").find("td").eq(10).html('Aceptada');
+    }
+
+    function DenegarSoli(e) {
+       $(this).parents("tr").find("td").eq(10).html('Denegada'); 
+    }
+
+    
 
 
 

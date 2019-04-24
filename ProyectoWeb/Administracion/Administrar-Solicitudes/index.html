@@ -33,10 +33,10 @@
           <a href="../../Home/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
         </li>
         <li class="nav-item">
-          <a href="#" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
+          <a href="../../Solicitar-Vacaciones/index.html" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
         </li>
         <li class="nav-item">
-          <a href="#" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
+          <a href="../../Historial individual/index.html" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
         </li>
       </ul>
 
@@ -46,9 +46,9 @@
            <i class='fas fa-user-alt'> Wilberth González</i>
          </a>
          <article class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Perfil</a>
-          <a class="dropdown-item" href="#">Editar perfil</a>
-          <a class="dropdown-item" href="#">Cerrar sesion</a>
+          <a class="dropdown-item" href="../../Perfil/General/index.html">Perfil</a>
+          <a class="dropdown-item" href="../../Perfil/Editar/index.html">Editar perfil</a>
+          <a class="dropdown-item" href="../../index.html">Cerrar sesion</a>
         </article>
       </li>
     </ul>
@@ -61,17 +61,17 @@
 <nav id="NavAdministrador">
   <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link " href="../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
+      <a class="nav-link " href="../../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link " href="#">Administrar solicitudes <span class="badge badge-light">4</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="#">Anulación de vacaciones</a>
+      <a class="nav-link " href="../../Anulacion/index.html">Anulación de vacaciones</a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link " href="#">Administrar usuarios</a>
+      <a class="nav-link " href="../Administrar-Usuarios/Adm-Usuarios.html">Administrar usuarios</a>
     </li>
     <li class="nav-item">
       <a class="nav-link " href="../Historial-General/index.html">Historial general</a>
@@ -82,9 +82,8 @@
     </li> 
   </ul>
 </nav>
-
+<h1 id="titulo">Administrar solicitudes</h1>
 <br/>
-
 <section class="container-fluid">
   
   <article >
@@ -94,12 +93,12 @@
           <th class="thCortas">N° Boleta</th>
           <th class="thCortas">N° Cédula</th>
           <th >Nombre del Solicitante</th>
-          <th class="thCortas">Fecha Solicitud</th>
-          <th class="thCortas">Fecha Inicial</th>
-          <th class="thCortas">Fecha Final</th>
-          <th class="thCortas">Fecha Regreso</th>
+          <th class="thMedianas">Fecha Solicitud</th>
+          <th class="thMedianas">Fecha Inicial</th>
+          <th class="thMedianas">Fecha Final</th>
+          <th class="thMedianas">Fecha Regreso</th>
           <th class="thCortas">Días solicitados</th>
-          <th>Área</th>
+          <th class="thMedianas">Área</th>
           <th class="thCortas">Días Disponibles</th>
           <th class="thCortas">Estado</th>
           <th class="Opcion">Opciones</th>                                    
@@ -108,21 +107,21 @@
       <tbody>
        <tr>
          <td>1</td>
-         <td>122314</td>
+         <td>111111111</td>
          <td>Juan Pablo Rodríguez Bogantes</td>
          <td>01-01-2019</td>
          <td>01-01-2019</td>
          <td>01-01-2019</td>
          <td>01-01-2019</td>
          <td>14</td>
-         <td>Recursos Humanos</td> 
+         <td>Docencia</td> 
          <td>14</td>
-         <td>Aprobada</td>
-         <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></span></td>  
+         <td>Pendiente</td>
+         <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>  
        </tr>
        <tr>
          <td>2</td>
-         <td>122314</td>
+         <td>222222222</td>
          <td>Wilberth González Juárez</td>
          <td>02-02-2019</td>
          <td>02-02-2019</td>
@@ -131,12 +130,12 @@
          <td>14</td>
          <td>Ingles</td> 
          <td>14</td>
-         <td>Aprobada</td>
-         <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+         <td>Pendiente</td>
+         <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td> 
        </tr>
        <tr>
         <td>4</td>
-        <td>122314</td>
+        <td>222222222</td>
         <td>Ashley Barrantes Delgado</td>
         <td>03-03-2019</td>
         <td>03-03-2019</td>
@@ -145,12 +144,12 @@
         <td>14</td>
         <td>TI</td>
         <td>14</td>
-        <td>Denegada</td>
-        <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+        <td>Pendiente</td>
+        <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>
       </tr>
       <tr>
        <td>14</td>
-       <td>122314</td>
+       <td>333333333</td>
        <td>Francisco Espinoza Sanchéz</td>
        <td>04-04-2019</td>
        <td>04-04-2019</td>
@@ -159,12 +158,12 @@
        <td>14</td>
        <td>TI</td>  
        <td>14</td>
-       <td>Aprobada</td>
-       <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+       <td>Pendiente</td>
+       <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td> 
      </tr>
      <tr>
       <td>15</td>
-      <td>122314</td>
+      <td>333333333</td>
       <td>Gabriel Alvarado Duarte</td>
       <td>05-05-2019</td>
       <td>05-05-2019</td>
@@ -173,12 +172,12 @@
       <td>14</td>
       <td>TI</td>
       <td>14</td>
-      <td>Aprobada</td>
-      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+      <td>Pendiente</td>
+      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>  
     </tr>
     <tr>
       <td>16</td>
-      <td>122314</td>
+      <td>444444444</td>
       <td>Jorddy Escalante Castro</td>
       <td>06-06-2019</td>
       <td>06-06-2019</td>
@@ -187,12 +186,12 @@
       <td>14</td>
       <td>Ingles</td>
       <td>14</td>
-      <td>Denegada</td>
-      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+      <td>Pendiente</td>
+      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>  
     </tr>
     <tr>
       <td>18</td>
-      <td>122314</td>
+      <td>444444444</td>
       <td>Rodrigo Araya</td>
       <td>07-07-2019</td>
       <td>07-07-2019</td>
@@ -201,12 +200,12 @@
       <td>14</td>
       <td>Ingles</td>
       <td>14</td>
-      <td>Denegada</td>
-      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+      <td>Pendiente</td>
+      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>  
     </tr>
     <tr>
       <td>19</td>
-      <td>122314</td>
+      <td>555555555</td>
       <td>Andrés Alfaro</td>
       <td>08-08-2019</td>
       <td>08-08-2019</td>
@@ -215,12 +214,12 @@
       <td>14</td>
       <td>Administracion</td>
       <td>14</td>
-      <td>Denegada</td>
-      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+      <td>Pendiente</td>
+      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td> 
     </tr>
     <tr>
      <td>20</td>
-     <td>122314</td>
+     <td>666666666</td>
      <td>Julio Alvarado Calvo</td>
      <td>09-09-2019</td>
      <td>09-09-2019</td>
@@ -229,12 +228,12 @@
      <td>14</td>
      <td>Docencia</td>
      <td>14</td>
-     <td>Denegada</td>
-     <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+     <td>Pendiente</td>
+     <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td> 
    </tr>
    <tr>
     <td>21</td>
-    <td>122314</td>
+    <td>666666666</td>
     <td>Felipe Mena</td>
     <td>10-10-2019</td>
     <td>10-10-2019</td>
@@ -243,12 +242,12 @@
     <td>14</td>
     <td>Docencia</td>
     <td>14</td>
-    <td>Denegada</td>
-    <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+    <td>Pendiente</td>
+    <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>
   </tr>
   <tr>
     <td>31</td>
-    <td>122314</td>
+    <td>777777777</td>
     <td>Roberto Rivera</td>
     <td>11-11-2019</td>
     <td>11-11-2019</td>
@@ -257,12 +256,12 @@
     <td>14</td>
     <td>Docencia</td> 
     <td>14</td>
-    <td>Aprobada</td>
-    <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+    <td>Pendiente</td>
+    <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>
   </tr>
   <tr>
    <td>32</td>
-   <td>122314</td>
+   <td>777777777</td>
    <td>Roque Dávila</td>
    <td>12-12-2019</td>
    <td>12-12-2019</td>
@@ -271,8 +270,8 @@
    <td>14</td>
    <td>Decano</td> 
    <td>14</td>
-   <td>Aprobada</td>
-   <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><button class="btn btn-primary btn-sm" id="btnImprimir">Imprimir</button ></span></td>  
+   <td>Pendiente</td>
+   <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>
  </tr>
 </tbody>
 </table>
@@ -316,12 +315,60 @@ aria-hidden="true">
       </button>
     </article>
     <article class="modal-body">
-      <form>
-        <article class="form-group">
-          <label for="message-text" class="col-form-label">Descripción:</label>
-          <textarea class="form-control" id="message-text"></textarea>
+                  <form id='form1' class="form-container" method="get" action="#">
+      
+      <article class="row">
+        <article class="form-group col-md-9">
+          <h3>BOLETA DE SOLICITUD DE VACACIONES</h3>
         </article>
-      </form>
+        <article class="form-group col-md-3">
+          <label for="Fecha">N° boleta</label>
+          <input type="text" class="form-control" id="Fecha" value="120420"readonly>
+        </article>
+      </article>
+
+      <article class="row">
+        <article class="form-group col-md-12">
+          <label for="Nombre">Nombre</label>
+          <input type="text" class="form-control" id="Nombre" readonly>
+        </article>
+        <article class="form-group col-md-12">
+          <label for="Cédula">Cédula</label>
+          <input type="text" class="form-control" id="Cédula" readonly>
+        </article>
+        <article class="form-group col-md-12">
+          <label for="Departamento">Departamento</label>
+          <input type="text" class="form-control" id="Departamento" readonly>
+        </article>        
+      </article>
+      <article class="row">
+        <article class="form-group col-md-3">
+          <label for="FechaSolicitud">Fecha de solicitud</label>
+          <input type="text" class="form-control" id="FechaSolicitud" readonly>
+        </article>
+        <article class="form-group col-md-3">
+          <label for="FechaInicio">Fecha de inicio</label>
+          <input type="text" class="form-control" id="FechaInicio" readonly>
+        </article>
+        <article class="form-group col-md-3">
+          <label for="FechaFinal">Fecha de final</label>
+          <input type="text" class="form-control" id="FechaFinal" readonly>
+        </article>
+        <article class="form-group col-md-3">
+          <label for="FechaRegreso">Fecha de regreso</label>
+          <input type="text" class="form-control" id="FechaRegreso" readonly>
+        </article>
+      </article>
+      <article class="form-row">
+        <article class="form-group col-md-12">
+          <label for="Observaciones">Observaciones</label>
+          <br>
+          <textarea style="width: 100%;" ></textarea>
+        </article>
+      </article>
+
+      
+    </form>
     </article>
     <article class="modal-footer">
       <button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button>

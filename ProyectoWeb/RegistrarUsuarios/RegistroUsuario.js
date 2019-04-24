@@ -16,8 +16,10 @@ function validateForm(e){
     }
 
 }
-function ocultar(variable){
-    
+function ocultar(variable){ 
+    var numero = parseInt(document.getElementById("numerito").value)-1;
+    document.getElementById("asig").innerHTML=numero;
+    document.getElementById("numerito").value=numero;
     document.getElementById("tabla"+variable).style.display="none";
     
 }

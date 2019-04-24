@@ -1,54 +1,21 @@
-*{
-	margin: 0px;
-	padding:0px;
-}
-
 body{
-	background:  #eae8ff;
-	
-}
-
-.ImgEnlaces{
-	width: 80px;
-	height: 80px;
-	margin-left: 20px;
-
-}
-
-#logo{
-	float:right;
-}
-
-.form-container{
-	border-radius: 10px;
-	padding: 30px;
-	box-shadow: 0px 0px 10px 0px;
+	background:  #fff;	
 }
 
 nav{
-	background-color:  	#091951;
+	background-color: #091951;
 	margin: 2px;
+}
+
+nav li a.nav-item {
+	color: #fff;
 	text-align: center;
 }
 
-.pull-right {
- float:right
-}
-
- li a{
-color: #fff;
-
-}
-
- nav li a.nav-item {
-color: #fff;
-text-align: center;
-}
-
 nav ul li a.nav-link {
-color: #fff;
-text-align: center;
-width: 200px;
+	color: #fff;
+	text-align: center;
+	width: 200px;
 }
 
 .navbar-nav.navbar-center {
@@ -66,6 +33,7 @@ header li a.dropdown-item{
 header li a:hover{
 	text-decoration: none;
 	background: #eae8ff;
+	color: blue;
 }
 
 header li a.nav-link:hover{
@@ -82,13 +50,8 @@ header li a.nav-link:hover{
 	color: blue;
 }
 
-
 #MenuLateral ul li a.nav-link{
 	color: blue;
-}
-
-#tramitesPagina h2{
-	text-align: left;
 }
 
 footer ul li {
@@ -105,19 +68,4 @@ footer ul li a:hover{
 
 #copy{
 	color: white;
-}
-
-aside, section section, section section article{
-	border: 1px solid lightblue;
-	border-radius: 5px;
-}
-
-.collapseMenu{
-	color: #fff;
-}
-#excel-icon{
-	color: green;
-}
-#pdf-icon{
-	color:red;
 }

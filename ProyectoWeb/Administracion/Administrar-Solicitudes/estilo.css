@@ -5,9 +5,9 @@
 	text-align: center;
 	background: red; 
 	padding: 2px;
-	width: 65px;
+	width: 55px;
 	height: 30px;
-	font-size: 15px;
+	font-size: 12px;
 	font-family: sans-serif;
 }
 
@@ -16,9 +16,9 @@
 	text-align: center;
 	background: green; 
 	padding: 2px;
-	width: 65px;
+	width: 50px;
 	height: 30px;
-	font-size: 15px;
+	font-size: 12px;
 	font-family: sans-serif;
 }
 
@@ -26,9 +26,9 @@
 	margin: 1px;
 	text-align: center;
 	padding: 2px;
-	width: 65px;
+	width: 50px;
 	height: 30px;
-	font-size: 15px;
+	font-size: 12px;
 	font-family: sans-serif;
 }
 
@@ -37,13 +37,29 @@
 }
 
 .Opcion {
-	width: 185px;
+	width: 158px;
 }
 
 .thCortas {
+	width: 30px;
+}
+.thMedianas {
 	width: 60px;
 }
 
+#ImgUTN{
+	border: none;
+	size: 80px;
+}
 
+h5, h3{
+	text-align: center;
+	font-family: monospace;
+}
+
+#titulo{
+	color: blue;
+	text-align: center;
+}
 
 

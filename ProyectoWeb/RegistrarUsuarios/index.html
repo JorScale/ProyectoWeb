@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home </title>
+    <title>Registrar Usuario </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="./RegistroUsuario.css">
@@ -28,10 +28,10 @@
                         <a href="../Home/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
+                        <a href="../Solicitar-Vacaciones/index.html" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
+                        <a href="../Historial individual/index.html" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
                     </li>
                </ul>
                <ul class="nav navbar-nav navbar-right">
@@ -40,9 +40,9 @@
                             <i class='fas fa-user-alt'> Francisco Espinoza</i>
                         </a>
                         <article class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Perfil</a>
-                            <a class="dropdown-item" href="#">Editar perfil</a>
-                            <a class="dropdown-item" href="#">Cerrar sesión</a>
+                            <a class="dropdown-item" href="../Perfil/General/index.html">Perfil</a>
+                            <a class="dropdown-item" href="../Perfil/Editar/index.html">Editar perfil</a>
+                            <a class="dropdown-item" href="../index.html">Cerrar sesión</a>
                         </article>
                     </li>
                 </ul>
@@ -53,19 +53,19 @@
         <a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title="Avatar de la UTN"><img src="../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
    </header><!-- /header -->
 
-	<nav id="NavAdministrador">
+	<nav  id="NavAdministrador">
 	    <ul class="nav justify-content-center">
-			  <li class="nav-item">
-			     <a class="nav-link " href="../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
+			  <li  value="3" id="numerito"class="nav-item">
+			     <a class="nav-link " href="../RegistrarUsuarios/index.html">Registrar usuario <span id="asig" class="badge badge-light"  >3</span></a>
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-link" href="../Administracion/Administrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link " href="#">Anulación de vacaciones</a>
+			    <a class="nav-link " href="../Anulacion/index.html">Anulación de vacaciones</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link " href="#">Administrar usuarios</a>
+			    <a class="nav-link " href="../Administracion/Administrar-Usuarios/Adm-Usuarios.html">Administrar usuarios</a>
 			  </li>
 			  <li class="nav-item">
 			    <a class="nav-link " href="../Administracion/Historial-General/index.html">Historial general</a>
@@ -77,19 +77,22 @@
 	</nav>
 
     <section class="container-fluid">
-        <aside id="MenuLateral" class="col-sm-2">
+       <aside id="MenuLateral" class="col-sm-2">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#"> <i class="far fa-address-book"> Contacto </i></a>
+                 <a class="nav-link active" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                   <i class="far fa-address-book"> Contacto </i> </a>
+                      <article class="collapse" id="collapseExample">
+                         <article class="card card-body">
+                            <b>2668 3500 ext(5032)</b>
+                         </article>
+                      </article>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> <script>   
                     var f = new Date();
                     document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
                     </script> </i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="far fa-envelope"> Notificaciones</i> </a>
                 </li>
             </ul>
         </aside>
@@ -137,9 +140,9 @@
     </section>
 
     <section class="modal fade " id="miModal" tabindex="-1" role="dialog" aria-hidden="true"data-backdrop="static" data-keboard="false">
-	    <section class=" modal-dialog modal-lg">
+	    <section class=" modal-dialog modal-lg molda-md">
 	      	<section class="modal-content">   
-	        	<section  id="titulo-modal" class="modal-header col-md" > 
+	        	<section  id="titulo-modal" class="modal-header col-md col-md-sx" > 
 	             	<h2 align="center" style="color: white">Registro</h2>  
 	        	</section>
 
@@ -148,28 +151,28 @@
 	                <form name="form1" class="form row"  method="post">
 	                     <section class=" form-group col-auto " >
 	                  		<legend id=modal-legend>Datos Personales</legend>
-	                        <section id="input-section" class="col-md-3">
+	                        <section id="input-section" class="col-md-3 col-md-12">
 	                           <label for="Nombre">Nombre</label>
 	                           <input  type="text " class="form-control " value="Ashley" id="Nombre" readonly>
 	                        </section>
-	                        <section id="input-section" class="col-md-3 col-md-offset-1 ">
+	                        <section id="input-section" class="col-md-3 col-md-offset-1  col-md-12">
 	                           <label for="apellido2">Apellido1</label>
 	                           <input type="text" class="form-control " value="Barrantes" id="Apellido1" readonly>
 	                        </section>
-	                        <section  id="input-section" class="col-md-3 col-md-offset-1">
+	                        <section  id="input-section" class="col-md-3 col-md-offset-1 col-md-12">
 	                           <label for="apellido2">Apellido2</label>
 	                           <input type="text" class="form-control" value="Delgado" id="Apellido2" readonly>
 	                        </section>
-	                        <section id="input-section" class="col-md-3">
+	                        <section id="input-section" class="col-md-3 col-md-12">
 	                           <label for="Cedula">Cedula</label>
 	                           <input type="text" class="form-control" value="7-0777-0777" id="Cedula" readonly>
 	                        </section>
-			                <section id="input-section" class="col-md-3 col-md-offset-1">
+			                <section id="input-section" class="col-md-3 col-md-offset-1 col-md-12">
 			                   <label for="numerotelefono">Numero de Telefono</label>
 			                   <input type="text" class="form-control" value="88-49-79-91" id="NumeroTelefono"  readonly>
 			                   <title>"Digite el nombre"</title>
 			                </section>
-			                <section id="input-section" class="col-md-3 col-md-offset-1">
+			                <section id="input-section" class="col-md-3 col-md-offset-1 col-md-12">
 			                   <label for="Correo">Correo</label>
 			                   <input type="text" class="form-control" value="Pitufa@gmail.com" id="Correo" readonly>
 			                   <title>"Digite el nombre"</title>
@@ -182,11 +185,11 @@
 			                  <label for="Fecha">Fecha de Contratación</label>
 			                  <input type="date" name="Fecha" required title="Digite la Fecha de contratación del usuario">
 	                        </section>
-	                        <section id="input-section" class="col-md-3 col-md-offset-1">
+	                        <section id="input-section" class="col-md-3 col-md-offset-1 col-md-12">
 	                           <label for="Grado">Titulo del puesto</label>
 	                           <input type="text" class="form-control" placeholder="Tecnico profecional 1" id="Titulo" required title="Digite el grado academico del usuario">
 	                        </section>
-	                        <section id="input-section" class="col-md-4 col-md-offset-1">
+	                        <section id="input-section" class="col-md-4 col-md-offset-1 col-md-12">
 	                            <label for="Departamento">Departamento o Carrera</label>
 	                            <input type="text" class="form-control" placeholder="Gestion del desarrollo Humano" id="Departamento" required title="Digite el departamento al que pertenece el usuario">
 	                        </section>
@@ -211,7 +214,7 @@
 	            </section>
 	        </section>
      </section>
-    <footer>
+    <footer class="fixed-bottom">
       <ul>
         <li>
          <h6><a href="../Politicas/index.html">Politicas de uso</a></h6>
