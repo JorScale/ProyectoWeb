@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home </title>
+    <title>Vacaciones UTN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
@@ -52,10 +52,10 @@
         </article>
     </nav>
 
-        <a href="http://utn.ac.cr" target="_blank" title="Pagina oficial de la UTN"><img src="../Imagenes/UTN.png" alt="UTN" class="ImgEnlaces"></a>
-
-        <a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title="Avatar de la UTN"><img src="../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
-
+      <section id="TituloPagina">
+         <h1 class="text-center">Página principal</h1>
+      </section> <br>
+       
     </header><!-- /header -->
 
 <nav id="NavAdministrador">
@@ -81,46 +81,50 @@
     <a class="nav-link " href="../Administracion/reporte-mensual/index.html">Reporte mensual</a>
   </li> 
 </ul>
-</nav>
+</nav> 
 
     <section class="container-fluid">
-        <aside id="MenuLateral" class="col-sm-2">
+        <section  class="col-sm-8 col-md-offset-1" id="tramitesPagina" >
+            <h2 class="pb-5 pt-4 text-center alert alert-info col-sm-4 col-md-12"> Tramites de la página </h2>
+            <article>
+                <h3 ><a href="../Solicitar-Vacaciones/index.html">Solicitud de vacaciones</a></h3>
+<p>En esta sección usted podrá llenar el formulario para la solicitud de vacaciones.</p>
+            </article> <br>
+            <article>
+                <h3><a href="../Perfil/General/index.html">Información personal</a></h3>
+              <p>En esta sección usted podrá ver información de su perfil, así como editar algunos datos de ser necesario.</p>
+            </article> <br>
+            <article>
+                <h3><a href="../Historial individual/index.html">Historial de vacaciones</a></h3>
+<p>En esta seccion usted podrá revisar el historial de vacaciones que tiene registradas en el sistema.</p>
+            </article> <br>
+        </section>
+
+        <aside id="MenuLateral" class="col-sm-2 pull-right">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                 <a class="nav-link active" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                   <i class="far fa-address-book"> Contacto </i> </a>
-                      <article class="collapse" id="collapseExample">
+                 <a class="nav-link" data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false" aria-controls="collapseContacto">
+                   <i class="far fa-address-book"> <b>Contacto </b> </i> </a>
+                      <article class="collapse" id="collapseContacto">
                          <article class="card card-body">
                             <b>2668 3500 ext(5032)</b>
                          </article>
                       </article>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> <script>   
+                  <a class="nav-link" href="http://utn.ac.cr" target="_blank"> <i class="fas fa-university"> UTN </i> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" > <i class="fas fa-book"> Avatar </i> </a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link href="#"> <i class="far fa-calendar-alt">  <b><script> 
                     var f = new Date();
                     document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-                    </script> </i></a>
+                    </script> </b> </i></a>
                 </li>
             </ul>
         </aside>
-        <section  class="col-sm-8" id="tramitesPagina">
-            <h1 align="center">
-                TRAMITES DE LA PAGINA
-            </h1>
-            <article>
-                <h2 ><a href="../Solicitar-Vacaciones/index.html">Solicitud de vacaciones</a></h2>
-<p>En esta sección usted podrá llenar el formulario para la solicitud de vacaciones.</p>
-            </article>
-            <article>
-                <h2><a href="../Perfil/General/index.html">Información personal</a></h2>
-              <p>En esta sección usted podrá ver información de su perfil, así como editar algunos datos de ser necesario.</p>
-            </article>
-            <article>
-                <h2><a href="../Historial individual/index.html">Historial de vacaciones</a></h2>
-<p>En esta seccion usted podrá revisar el historial de vacaciones que tiene registradas en el sistema.</p>
-
-            </article>
-        </section>
     </section>
     <br> <br>
 
