@@ -14,7 +14,7 @@ $(document).ready(function() {
             },
             {
                 extend: 'print',
-                text: ' <i class="fa fa-print" aria-hidden="true"></i>',
+                text: ' <i class="fa fa-print" aria-hidden="true" id="print-icon"></i>',
                 titleAttr: 'Imprimir'
             }
         ],
