@@ -107,7 +107,7 @@ footer ul li a:hover{
 	color: white;
 }
 
-aside, section section, section section article{
+aside, section section{
 	border: 1px solid lightblue;
 	border-radius: 5px;
 }
