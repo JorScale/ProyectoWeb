@@ -117,7 +117,12 @@ aside, section section, section section article{
 }
 #excel-icon{
 	color: green;
+	font-size:22px;
 }
 #pdf-icon{
 	color:red;
+	font-size:22px;
+}
+#print-icon{
+	font-size:22px;
 }
