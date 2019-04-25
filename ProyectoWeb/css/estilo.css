@@ -15,6 +15,10 @@ body{
 
 }
 
+#TituloPagina h1{
+	color: #337ab7;
+}
+
 #logo{
 	float:right;
 }
