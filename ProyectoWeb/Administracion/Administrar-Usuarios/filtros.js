@@ -14,6 +14,23 @@ $('#tablaUsuarios').DataTable({
     }
    });
 });
+
+//Llenar text de modal
+    $(document).ready(function(){
+  $('.btnEditarAdmUsu').click(function(){
+    $valor = $(this).parents("tr").find("td").eq(1).text();
+    $usu = $(this).parents("tr").find("td").eq(2).text();
+    $puesto = $(this).parents("tr").find("td").eq(3).text();
+    $depa = $(this).parents("tr").find("td").eq(4).text();
+    $cargo = $(this).parents("tr").find("td").eq(5).text();
+    $('.txtCédula').val($valor);
+    $('.txtNombre').val($usu);
+    $('.txtPuesto').val($puesto);
+    $('.txtDepa').val($depa);
+    $('.txtCargo').val($cargo);
+  });
+});
+
  //Script para borrar fila
        $(function () {
     $(document).on('click', '.borrar', function (event) {
