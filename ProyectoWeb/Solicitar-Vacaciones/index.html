@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="solicitar.css">
+
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+      
+ 
     <link rel="shortcut icon" href="../Iconos/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../Iconos/favicon.ico" type="image/x-icon">
     <!--tabla-->
@@ -19,11 +22,19 @@
     <!-- botones -->
     <link rel="stylesheet" href="DataTables/Buttons/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.0/css/select.dataTables.min.css">
+   <link rel="stylesheet" type="text/css" href="../css/style.css">
+    
+    <script src="../js/moment.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="../css/application.min.css">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+
 </head>
 
-<body>
+<body onload="fechaactual();">
+
     <header>
         <nav class="navbar navbar-expand-md sticky-top " role="navigation">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -91,8 +102,8 @@
           <img src="../Imagenes/UTN.png" class="img-thumbnail" id="ImgUTN" />
         </article>
         <article class="form-group col-md-10">
-          <h3>DIRECCIÓN DE GESTIÓN DE DESARROLLO HUMANO</h3>
-          <h3>BOLETA DE SOLICITUD DE VACACIONES</h3>
+          <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInDown">DIRECCIÓN DE GESTIÓN DE DESARROLLO HUMANO</h3>
+          <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInUp">BOLETA DE SOLICITUD DE VACACIONES</h3>
         </article>
         <article class="form-group col-md-1">
           <label for="Fecha">N° boleta</label>
@@ -103,19 +114,19 @@
       <article class="row">
         <article class="form-group col-md-4">
           <label for="Nombre">Nombre</label>
-          <input type="text" class="form-control" id="Nombre" >
+          <input type="text" class="form-control" id="Nombre" readonly="">
         </article>
         <article class="form-group col-md-2">
           <label for="Cédula">Cédula</label>
-          <input type="text" class="form-control" id="Cédula" >
+          <input onchange="cedulacheck();" type="number" class="form-control" id="Cédula"  readonly="">
         </article>
         <article class="form-group col-md-4">
           <label for="Departamento">Departamento</label>
-          <input type="text" class="form-control" id="Departamento" >
+          <input type="text" class="form-control" id="Departamento" readonly="" >
         </article>
         <article class="form-group col-md-2">
           <label for="Puesto">Puesto</label>
-          <input type="text" class="form-control" id="Puesto" >
+          <input type="text" class="form-control" id="Puesto" readonly="" >
         </article>
       </article>
       <article class="form-row">
@@ -124,7 +135,7 @@
       <article class="row">
         <article class="form-group col-md-3">
           <label for="FechaSolicitud">Fecha de solicitud</label>
-          <input type="date" class="form-control" id="FechaSolicitud"  readonly>
+          <input type="text" class="form-control" id="FechaSolicitud" readonly="" >
         </article>
         <article class="form-group col-md-3">
           <label for="FechaInicio">Fecha de inicio</label>
@@ -132,84 +143,120 @@
         </article>
         <article class="form-group col-md-3">
           <label for="FechaFinal">Fecha de final</label>
-          <input type="date" class="form-control" id="FechaFinal" >
+          <input type="date" class="form-control" id="FechaFinal" onchange="fechacheck();"  min="100000000" max="999999999" >
         </article>
         <article class="form-group col-md-3">
           <label for="FechaRegreso">Fecha de regreso</label>
           <input type="date" class="form-control" id="FechaRegreso" >
         </article>
+
+         
+        <article class="form-group col-md-12  text-center">
+           
+          <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInDown">
+          Cantidad de días
+          </h3>
+          <input class="animated fadeInUp text-center" style="font-size: 80px; font-weight: bold; width: 150px;" type="number" class="form-control" id="CDias" >
+           
+          
+         </article>
+          
       </article>
 
-      <h3>VACACIONES ADQUIRIDAS</h4>
+      <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInDown">VACACIONES ADQUIRIDAS</h4>
       <article class="row">
         <article class="form-group col-md-3">
           <label for="Periodo">Período 1</label>
-          <input type="text" class="form-control" id="Periodo" >
+          <input type="number" class="form-control" id="Periodo" >
         </article>
         <article class="form-group col-md-3">
           <label for="DiasDisfrutar">N° de dias a disfrutar</label>
-          <input type="text" class="form-control" id="FechaInicio" >
+          <input type="number" class="form-control" id="2DiasDisfrutar" >
         </article>
         <article class="form-group col-md-3">
           <label for="Saldo">Saldo</label>
-          <input type="text" class="form-control" id="Saldo" >
+          <input type="number" class="form-control" id="Saldo" >
         </article>
       </article>
       <article class="row">
         <article class="form-group col-md-3">
           <label for="Periodo">Período 2</label>
-          <input type="text" class="form-control" id="Periodo" >
+          <input type="number" class="form-control" id="Periodo" >
         </article>
         <article class="form-group col-md-3">
           <label for="DiasDisfrutar">N° de dias a disfrutar</label>
-          <input type="text" class="form-control" id="DiasDisfrutar" >
+          <input type="number" class="form-control" id="1DiasDisfrutar" >
         </article>
         <article class="form-group col-md-3">
           <label for="Saldo">Saldo</label>
-          <input type="text" class="form-control" id="Saldo" >
+          <input type="number" class="form-control" id="Saldo" >
         </article>
       </article>
       <article class="row">
         <article class="form-group col-md-5">
           <label for="Periodo">Día y mes que cumple período</label>
-          <input type="text" class="form-control" id="Periodo" >
+          <input type="date" dateformat="d M y" class="form-control" id="Periodo" >
+
         </article>
         <article class="form-group col-md-4">
           <label for="DiasDisfrutar">Cantidad de días que adquiere</label>
-          <input type="text" class="form-control" id="DiasDisfrutar" >
+          <input type="number"  class="form-control" id="DiasDisfrutar" >
         </article>
       </article>
-      <h3>VACACIONES PROPORCIONALES</h4>
+      <h3 style="animation-delay: 2s; -webkit-animation-delay: 1s;" class="animated fadeInUp">VACACIONES PROPORCIONALES</h4>
       <article class="row">
         <article class="form-group col-md-2">
           <label for="Periodo">Período</label>
-          <input type="text" class="form-control" id="Periodo" >
+          <input type="number" class="form-control" id="Periodo" >
         </article>
         <article class="form-group col-md-2">
           <label for="DiasDisfrutar">N° de dias a disfrutar</label>
-          <input type="text" class="form-control" id="DiasDisfrutar" >
+          <input type="number" class="form-control" id="DiasDisfrutar" >
         </article>
         <article class="form-group col-md-2">
           <label for="Saldo">Saldo</label>
-          <input type="text" class="form-control" id="Saldo" >
+          <input type="number" class="form-control" id="Saldo" >
         </article>
                 <article class="form-group col-md-3">
-                    <label for="FechaInicio">Fecha de inicio</label>
-                    <input type="text" class="form-control" id="FechaInicio" >
+                    <label for="FechaInicioP">Fecha de inicio</label>
+                    <input type="date" class="form-control" id="FechaInicioP" >
                 </article>
                 <article class="form-group col-md-3">
-                    <label for="FechaFinal">Fecha de final</label>
-                    <input type="text" class="form-control" id="FechaFinal" >
+                    <label for="FechaFinalP">Fecha de final</label>
+                    <input type="date" class="form-control" id="FechaFinalP" >
                 </article>
-                <article class="form-group col-md-3">
-                    <button type="button" class="btn-primary btn-sm" >Enviar</button>
-                   
-                </article>
+                <article class="form-group col-md-12  text-center">
+                    <button type="button" style="width: 500px"  class="btn-primary btn-sm" id="btneviar">Enviar</button>
+                    
       
       </article>
     </form>
+   
+  
+<!-- Modal -->
+<div id="Modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title"></h4>
+  </div>
+  <div class="modal-body text-center">
+    <p id="moadaltext">Fecha Invalida.</p>
+  </div>
+   
+</div>
+
+  </div>
+</div>
+
             
   </section>
+
+   
+  
   <br>
    <footer class="fixed-bottom">
       <ul>
@@ -224,7 +271,64 @@
        
     </footer>
 
+     
+  
+ 
+   
 
+    <script>	
+    	function fechaactual(){
+    		document.getElementById("FechaSolicitud").value = moment().format('DD/MM/YYYY');
+    	}
+    	
+    </script>
+
+
+<script>
+	function fechacheck() {
+                    
+         
+          const myDate1 = moment(document.getElementById("FechaInicio").value, 'YYYY-MM-DD').toDate();
+          const myDate2 = moment(document.getElementById("FechaFinal").value, 'YYYY-MM-DD').toDate();
+          const myDate3 = moment(moment().add(3, 'days'), 'YYYY-MM-DD').toDate();
+
+
+		  if(myDate2 < myDate1){
+             $('#Modal').modal('show');
+             document.getElementById("FechaInicio").value = "";
+             document.getElementById("FechaFinal").value = "";
+          }else if(myDate1 <= myDate3){
+          	$("#Modal .modal-body").text('Solo con 3 Dias de Anticipacion');
+          	$('#Modal').modal('show');
+          	document.getElementById("FechaInicio").value = "";
+            document.getElementById("FechaFinal").value = "";
+        }else{
+        	 
+        	var current = moment(document.getElementById("FechaInicio").value, "YYYY-MM-DD");
+            var given = moment(document.getElementById("FechaFinal").value, 'YYYY-MM-DD');
+
+           document.getElementById("FechaRegreso").valueAsDate = moment(moment(myDate2).add(1, 'days'), 'YYYY-MM-DD').toDate();
+            document.getElementById("CDias").value = moment.duration(given.diff(current)).asDays() + 1;
+          }
+ 
+	}	
+</script>
+
+<script>
+	function cedulacheck() {
+     id = document.getElementById("Cédula").value;
+      if (id.length < 9){
+      	$("#Modal .modal-body").text('Minimo 9 digitos');
+          	$('#Modal').modal('show');
+       document.getElementById("Cédula").value = "";
+
+     }
+
+	}
+
+</script>
+
+ 
  </body>
  </html>  
 
