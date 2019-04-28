@@ -7,6 +7,7 @@
     <title>Vacaciones UTN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../Administrar-Solicitudes/estilo.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
@@ -87,109 +88,155 @@
   </li> 
 </ul>
 </nav>
-<section class="container-fluid col-lg-8 col-md-offset-2 shadow mt-4 pb-3 bg-white shadow">
+<section class="container-fluid col-lg-11 shadow mt-4 pb-3 bg-white shadow" style="margin-right: 50px; margin-left: 50px;">
       <article>
         <h2 class="pb-5 pt-4 text-center alert alert-info col-md-12"> Historial General </h2>
       </article>
-            <article class="table-responsive">
-            <table class="table table-bordered table-hover  nowrap" border="2" id="Historial" >
-               <colgroup>
-       <col style="width: 35%"/>
-      <col style="width: 25%"/>
-      <col style="width: 25%"/>
-      <col style="width: 15%"/>
-  </colgroup>
+            
+            <table class="table table-bordered table-hover" border="2" id="Historial" >
+             
                 <thead class="thead-dark">
                     <tr>
-                        <th class="text-center">Nombre Completo</th>
-                        <th class="text-center">Fecha de Ingreso</th>
-                        <th class="text-center">Días disponibles</th>
-                        <th class="text-center">Departamento</th>
+                        <th class="thCortas">Nombre completo</th>
+                        <th class="thCortas">Cédula boleta</th>
+                        <th class="thCortas">Fecha de ingreso</th>
+                        <th class="thCortas">Fecha  inicial</th>
+                        <th class="thCortas">Fecha  final</th>
+                        <th class="thCortas">Días disponibles</th>
+                        <th class="thCortas">Departamento</th>
         
                     </tr>
                 </thead>
                 <tbody class="text-center">
                     <tr>
+                        <th>Número de boleta</th>
+                        <th>Cédula</th>
+                        <th>Nombre Completo</th>
+                        <th>Fecha  Inicial</th>
+                        <th>Fecha  Final</th>
+                        <th>Días disponibles</th>
+                        <th>Departamento</th>
+        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1213213</td>
                         <td>Jorddy  Escalante</td>
                         <td>01-01-2019</td>
+                        <td>01-15-2019</td>
                         <td>14</td>
                         <td>Administracion</td>
                     </tr>
                     <tr>
+                         <td>2</td>
+                        <td>2213213</td>
                         <td>Omar Castro</td>
                         <td>01-01-2019</td>
+                        <td>01-15-2019</td>
                         <td>14</td>
                         <td>Administracion</td>
                     </tr>
                     <tr>
-
-                      <td>Luis Fernando</td>
+                         <td>3</td>
+                        <td>3213213</td>
+                       <td>Luis Fernando</td>
                         <td>01-02-2019</td>
+                        <td>01-15-2019</td>
                         <td>14</td>
                         <td>Administracion</td>  
                     </tr>
-                    <tr>
+                    <tr>  
+                        <td>4</td>
+                        <td>4213213</td>
                         <td>Mario Gonzalez</td>
                         <td>01-01-2019</td>
-                        <td>14</td>
-                        <td>Administracion</td>
-                    </tr>
-                    <tr>
-                        <td>Eduardo Perez</td>
-                        <td>01-01-2017</td>
+                        <td>01-15-2019</td>
                         <td>14</td>
                         <td>Administracion</td>
                     </tr>
                     <tr> 
+                         <td>5</td>
+                        <td>5213213</td>
+                        <td>Eduardo Perez</td>
+                        <td>01-01-2017</td>
+                         <td>01-17-2017</td>
+                        <td>14</td>
+                        <td>Administracion</td>
+                    </tr>
+                    <tr> 
+                        <td>6</td>
+                        <td>6213213</td>
                        <td>Josue Nuñez</td>
                         <td>01-01-2019</td>
+                        <td>01-15-2019</td>
                         <td>14</td>
                         <td>Administracion</td>  
                     </tr>
                       <tr>
+                        <td>7</td>
+                        <td>7213213</td>
                         <td>Maria fernandez</td>
                         <td>01-01-2019</td>
+                         <td>01-15-2019</td>
                         <td>14</td>
                         <td>Administracion</td>
                     </tr>
                     <tr> 
+                         <td>8</td>
+                        <td>1433213</td>
                         <td>Brandon Sanchez</td>
                         <td>01-01-2019</td>
+                        <td>01-15-2019</td>
                         <td>17</td>
                         <td>Administracion</td>
                     </tr>
                     <tr>
+                        <td>9</td>
+                        <td>2183213</td>
                       <td>Dennis Mendez</td>
                         <td>01-01-2019</td>
+                        <td>01-15-2019</td>
                         <td>17</td>
                         <td>Docencia</td>  
                     </tr>
-                      <tr>
+                      <tr> 
+                        <td>10</td>
+                        <td>3423213</td>
                         <td>Karen Vargas</td>
                         <td>01-01-2018</td>
+                        <td>01-15-2018</td>
                         <td>17</td>
                         <td>Docencia</td>
                     </tr>
                     <tr>
+                        <td>11</td>
+                        <td>45223213</td>
                         <td>Joshua Murillo</td>
                         <td>01-01-2018</td>
+                        <td>01-15-2018</td>
                         <td>17</td>
                         <td>Docencia</td>
                     </tr>
                     <tr>
-                      <td>Alejandro Quiros</td>
+                        <td>12</td>
+                        <td>45223313</td>
+                        <td>Alejandro Quiros</td>
                         <td>01-01-2018</td>
+                        <td>01-15-2018</td>
                         <td>17</td>
                         <td>Docencia</td>  
                     </tr>
+                   
                    
                 </tbody>
             </table>
         </article>
     </section>
-   </br> </br></br>
+   </br> 
 
-    <footer class="fixed-bottom">
+    <footer>
       <ul>
         <li>
          <h6><a href="../../Politicas/index.html">Politicas de uso</a></h6>
