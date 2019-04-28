@@ -43,7 +43,7 @@
                     valores[n]=encabezados[n]+" :\t"+$(this).html()+"\n";
                 }               
             });
-            alert("\t Informacion de boleta de solicitud de vacaciones \n\n"+valores);
+           //alert("\t Informacion de boleta de solicitud de vacaciones \n\n"+valores);
             
     }
 
