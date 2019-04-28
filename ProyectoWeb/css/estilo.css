@@ -15,6 +15,10 @@ body{
 
 }
 
+#TituloPagina h1{
+	color: #337ab7;
+}
+
 #logo{
 	float:right;
 }
@@ -107,11 +111,27 @@ footer ul li a:hover{
 	color: white;
 }
 
-aside, section section, section section article{
-	border: 1px solid lightblue;
-	border-radius: 5px;
-}
+
 
 .collapseMenu{
 	color: #fff;
+}
+#excel-icon{
+	color: green;
+	font-size:22px;
+}
+#pdf-icon{
+	color:red;
+	font-size:22px;
+}
+
+#activeN{
+	background: #d0d3d4;
+	color:blue;
+	
+
+}
+#print-icon{
+	font-size:22px;
+
 }

@@ -1,0 +1,35 @@
+header, footer, nav, aside, #filtrar {
+  display: none !important;
+}
+#imprimir, #buscar {
+  display: none;
+}
+body{
+  float: none !important;
+  width: auto !important;
+  margin:  0 !important;
+  padding: 0 !important;
+
+color: #000;
+font: 100%/150% Georgia, "Times New Roman", Times, serif; 
+}
+#panel{
+	background: #000; 
+    border-color: #000;
+}
+#encabezadoPanel{
+    background: #000; 
+    border-color: #000;
+}
+#cuerpoPanel{
+    background: #000; 
+    border-color: #000;
+}
+#tabla{
+	font-size:11px;
+}
+#utnimg{
+	display: block !important;
+	width: 98px;
+	height: 98px;
+}

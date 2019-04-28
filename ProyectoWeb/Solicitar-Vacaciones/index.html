@@ -1,0 +1,335 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitud de vacaciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="solicitar.css">
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+      
+ 
+    <link rel="shortcut icon" href="../Iconos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../Iconos/favicon.ico" type="image/x-icon">
+    <!--tabla-->
+    <link rel="stylesheet" href="DataTables/DataTable/css/jquery.dataTables.min.css">
+    <!-- botones -->
+    <link rel="stylesheet" href="DataTables/Buttons/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.0/css/select.dataTables.min.css">
+   <link rel="stylesheet" type="text/css" href="../css/style.css">
+    
+    <script src="../js/moment.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="../css/application.min.css">
+
+
+</head>
+
+<body onload="fechaactual();">
+
+    <header>
+        <nav class="navbar navbar-expand-md sticky-top " role="navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <article class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav pull-xs-left ">
+                    <li class="nav-item">
+                        <a href="../Home/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" title="" class="nav-link" id="activeN" ><i class="fas fa-briefcase"> Solicitar </i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Historial individual/index.html" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class='fas fa-user-alt'> Wilberth González</i>
+                        </a>
+                        <article class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../Perfil/General/index.html">Perfil</a>
+                            <a class="dropdown-item" href="../Perfil/Editar/index.html">Editar perfil</a>
+                            <a class="dropdown-item" href="../index.html">Cerra sesion</a>
+                        </article>
+                    </li>
+                </ul>
+            </article>
+        </nav>
+        <a href="http://utn.ac.cr" target="_blank" title=""><img src="../Imagenes/UTN.png" alt="UTN" class="ImgEnlaces"></a>
+        <a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title=""><img src="../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
+    </header><!-- /header -->
+    <nav id="NavAdministrador">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../Administracion/Administrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">Anulación de vacaciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../Administracion/Administrar-Usuarios/Adm-Usuarios.html">Administrar usuarios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../Administracion/Historial-General/index.html">Historial general</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../Administracion/reporte-mensual/index.html">Reporte mensual</a>
+            </li>
+        </ul>
+    </nav>
+    <br/>
+    <h1 id="titulo">Solicitud de vacaciones</h1>
+  <section class="container-fluid">
+    <form id='form1' class="form-container" method="get" action="#">
+      
+      <article class="row">
+        
+        <article class="form-group col-md-1">
+          <img src="../Imagenes/UTN.png" class="img-thumbnail" id="ImgUTN" />
+        </article>
+        <article class="form-group col-md-10">
+          <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInDown">DIRECCIÓN DE GESTIÓN DE DESARROLLO HUMANO</h3>
+          <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInUp">BOLETA DE SOLICITUD DE VACACIONES</h3>
+        </article>
+        <article class="form-group col-md-1">
+          <label for="Fecha">N° boleta</label>
+          <input type="text" class="form-control" id="Fecha" value="120420" readonly>
+        </article>
+      </article>
+
+      <article class="row">
+        <article class="form-group col-md-4">
+          <label for="Nombre">Nombre</label>
+          <input type="text" class="form-control" id="Nombre" readonly="">
+        </article>
+        <article class="form-group col-md-2">
+          <label for="Cédula">Cédula</label>
+          <input onchange="cedulacheck();" type="number" class="form-control" id="Cédula"  readonly="">
+        </article>
+        <article class="form-group col-md-4">
+          <label for="Departamento">Departamento</label>
+          <input type="text" class="form-control" id="Departamento" readonly="" >
+        </article>
+        <article class="form-group col-md-2">
+          <label for="Puesto">Puesto</label>
+          <input type="text" class="form-control" id="Puesto" readonly="" >
+        </article>
+      </article>
+      <article class="form-row">
+        
+      </article>
+      <article class="row">
+        <article class="form-group col-md-3">
+          <label for="FechaSolicitud">Fecha de solicitud</label>
+          <input type="text" class="form-control" id="FechaSolicitud" readonly="" >
+        </article>
+        <article class="form-group col-md-3">
+          <label for="FechaInicio">Fecha de inicio</label>
+          <input type="date" class="form-control" id="FechaInicio" >
+        </article>
+        <article class="form-group col-md-3">
+          <label for="FechaFinal">Fecha de final</label>
+          <input type="date" class="form-control" id="FechaFinal" onchange="fechacheck();"  min="100000000" max="999999999" >
+        </article>
+        <article class="form-group col-md-3">
+          <label for="FechaRegreso">Fecha de regreso</label>
+          <input type="date" class="form-control" id="FechaRegreso" >
+        </article>
+
+         
+        <article class="form-group col-md-12  text-center">
+           
+          <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInDown">
+          Cantidad de días
+          </h3>
+          <input class="animated fadeInUp text-center" style="font-size: 80px; font-weight: bold; width: 150px;" type="number" class="form-control" id="CDias" >
+           
+          
+         </article>
+          
+      </article>
+
+      <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInDown">VACACIONES ADQUIRIDAS</h4>
+      <article class="row">
+        <article class="form-group col-md-3">
+          <label for="Periodo">Período 1</label>
+          <input type="number" class="form-control" id="Periodo" >
+        </article>
+        <article class="form-group col-md-3">
+          <label for="DiasDisfrutar">N° de dias a disfrutar</label>
+          <input type="number" class="form-control" id="2DiasDisfrutar" >
+        </article>
+        <article class="form-group col-md-3">
+          <label for="Saldo">Saldo</label>
+          <input type="number" class="form-control" id="Saldo" >
+        </article>
+      </article>
+      <article class="row">
+        <article class="form-group col-md-3">
+          <label for="Periodo">Período 2</label>
+          <input type="number" class="form-control" id="Periodo" >
+        </article>
+        <article class="form-group col-md-3">
+          <label for="DiasDisfrutar">N° de dias a disfrutar</label>
+          <input type="number" class="form-control" id="1DiasDisfrutar" >
+        </article>
+        <article class="form-group col-md-3">
+          <label for="Saldo">Saldo</label>
+          <input type="number" class="form-control" id="Saldo" >
+        </article>
+      </article>
+      <article class="row">
+        <article class="form-group col-md-5">
+          <label for="Periodo">Día y mes que cumple período</label>
+          <input type="date" dateformat="d M y" class="form-control" id="Periodo" >
+
+        </article>
+        <article class="form-group col-md-4">
+          <label for="DiasDisfrutar">Cantidad de días que adquiere</label>
+          <input type="number"  class="form-control" id="DiasDisfrutar" >
+        </article>
+      </article>
+      <h3 style="animation-delay: 2s; -webkit-animation-delay: 1s;" class="animated fadeInUp">VACACIONES PROPORCIONALES</h4>
+      <article class="row">
+        <article class="form-group col-md-2">
+          <label for="Periodo">Período</label>
+          <input type="number" class="form-control" id="Periodo" >
+        </article>
+        <article class="form-group col-md-2">
+          <label for="DiasDisfrutar">N° de dias a disfrutar</label>
+          <input type="number" class="form-control" id="DiasDisfrutar" >
+        </article>
+        <article class="form-group col-md-2">
+          <label for="Saldo">Saldo</label>
+          <input type="number" class="form-control" id="Saldo" >
+        </article>
+                <article class="form-group col-md-3">
+                    <label for="FechaInicioP">Fecha de inicio</label>
+                    <input type="date" class="form-control" id="FechaInicioP" >
+                </article>
+                <article class="form-group col-md-3">
+                    <label for="FechaFinalP">Fecha de final</label>
+                    <input type="date" class="form-control" id="FechaFinalP" >
+                </article>
+                <article class="form-group col-md-12  text-center">
+                    <button type="button" style="width: 500px"  class="btn-primary btn-sm" id="btneviar">Enviar</button>
+                    
+      
+      </article>
+    </form>
+   
+  
+<!-- Modal -->
+<div id="Modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title"></h4>
+  </div>
+  <div class="modal-body text-center">
+    <p id="moadaltext">Fecha Invalida.</p>
+  </div>
+   
+</div>
+
+  </div>
+</div>
+
+            
+  </section>
+
+   
+  
+  <br>
+   <footer class="fixed-bottom">
+      <ul>
+        <li>
+         <h6><a href="../Politicas/index.html">Politicas de uso</a></h6>
+      </li>
+
+      <li>
+        <h6 id="copy">&copy uTn </h6>
+      </li>
+      </ul>
+       
+    </footer>
+
+     
+  
+ 
+   
+
+    <script>	
+    	function fechaactual(){
+    		document.getElementById("FechaSolicitud").value = moment().format('DD/MM/YYYY');
+    	}
+    	
+    </script>
+
+
+<script>
+	function fechacheck() {
+                    
+         
+          const myDate1 = moment(document.getElementById("FechaInicio").value, 'YYYY-MM-DD').toDate();
+          const myDate2 = moment(document.getElementById("FechaFinal").value, 'YYYY-MM-DD').toDate();
+          const myDate3 = moment(moment().add(3, 'days'), 'YYYY-MM-DD').toDate();
+
+
+		  if(myDate2 < myDate1){
+             $('#Modal').modal('show');
+             document.getElementById("FechaInicio").value = "";
+             document.getElementById("FechaFinal").value = "";
+          }else if(myDate1 <= myDate3){
+          	$("#Modal .modal-body").text('Solo con 3 Dias de Anticipacion');
+          	$('#Modal').modal('show');
+          	document.getElementById("FechaInicio").value = "";
+            document.getElementById("FechaFinal").value = "";
+        }else{
+        	 
+        	var current = moment(document.getElementById("FechaInicio").value, "YYYY-MM-DD");
+            var given = moment(document.getElementById("FechaFinal").value, 'YYYY-MM-DD');
+
+           document.getElementById("FechaRegreso").valueAsDate = moment(moment(myDate2).add(1, 'days'), 'YYYY-MM-DD').toDate();
+            document.getElementById("CDias").value = moment.duration(given.diff(current)).asDays() + 1;
+          }
+ 
+	}	
+</script>
+
+<script>
+	function cedulacheck() {
+     id = document.getElementById("Cédula").value;
+      if (id.length < 9){
+      	$("#Modal .modal-body").text('Minimo 9 digitos');
+          	$('#Modal').modal('show');
+       document.getElementById("Cédula").value = "";
+
+     }
+
+	}
+
+</script>
+
+ 
+ </body>
+ </html>  
+
+

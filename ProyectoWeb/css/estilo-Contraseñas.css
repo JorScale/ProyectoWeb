@@ -1,0 +1,120 @@
+.correo{
+  color: #7F8C8D;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+			color: #34495E;
+			text-decoration: none;
+			font-family: Arial, Helvetica, sans-serif;
+          text-decoration: underline;
+              cursor: pointer;
+                      float: left;
+		}
+    a:hover {
+    color: #909497;
+    text-decoration: underline;
+
+}
+
+    p{
+      color: #909497  ;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+footer{
+	color: #D6DBDF;
+	 background: linear-gradient(#0D2D6D,#0D47A1);
+   text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+body{
+  /* The image used */
+  background-image: linear-gradient( #E0E0E0,#FDFEFE,#E0E0E0);
+  /*background-image: url(https://images.clarin.com/2016/09/26/Sk4P_k6F4l_1256x620.jpg) ;*/
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+}
+
+.btn-primary {
+  color:white;
+  background-repeat: repeat-x;
+  background-image: linear-gradient( #0D2D6D,#604DF1 );
+}
+ nav li a.nav-item {
+color: #fff;
+text-align: center;
+background: linear-gradient(#0D2D6D,#0D47A1);
+}
+
+nav ul li a.nav-link {
+color: #fff;
+text-align: center;
+width: 200px;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+nav{
+  background: linear-gradient(#0D2D6D,#0D47A1);
+  color: white;
+}
+.covida{
+  background: linear-gradient(#F4F6F7,#F2F4F4);
+}
+
+.titulo{
+  color: #F4F6F7;
+}
+
+.img-circle{
+  border-radius: 50%;
+}
+navbar-collapse{
+  color: white;
+}
+input{
+  border-color: #17202A;
+}
+
+.alerta{
+  color: red;
+  font-weight:bold;
+  font-size:11px;
+  font-color:white;
+  font-family:'Helvetica','Verdana','Monaco',sans-serif;
+}
+
+input
+{
+    background: url("iconos.gif") no-repeat scroll 0 0 transparent;
+    border: 1px solid #BFBFBF;
+    color: #BFBFBF;
+    padding: 5px 5px 5px 25px;
+    width: 230px;
+}
+
+input.submit
+{
+    width: auto;
+    background-position: 4px -91px;
+    background-color: #999999;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+input.user{ background-position: 4px -21px; }
+input.search{ background-position: 4px 4px; }
+input.password{ background-position: 4px -46px; }
+input.favorite{ background-position: 4px -70px; }

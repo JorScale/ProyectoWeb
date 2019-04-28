@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Historial individual </title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/estilo.css" media="screen">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../Iconos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../Iconos/favicon.ico" type="image/x-icon">
+
+        <!--tabla-->
+    <link rel="stylesheet" href="../Administracion/DataTables/DataTable/css/jquery.dataTables.min.css">
+    <!-- botones -->
+    <link rel="stylesheet" href="../Administracion/DataTables/Buttons/css/buttons.dataTables.min.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md sticky-top " role="navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="collapseMenu"> <i class="fas fa-bars fa-1x"></i></span>
+        </button>
+        <article class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav pull-xs-left " >
+                <li class="nav-item">
+                    <a href="../Home/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Solicitar-Vacaciones/index.html" title="Solicitar vacaciones" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" title="Historial personal" class="nav-link" id="activeN" ><i class="fas fa-history"> Historial</i></a>
+                </li>
+               </ul>
+
+               <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class='fas fa-user-alt'> Francisco Espinoza</i>
+                    </a>
+                    <article class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../Perfil/General/index.html">Perfil</a>
+                        <a class="dropdown-item" href="../Perfil/Editar/index.html">Editar perfil</a>
+                        <a class="dropdown-item" href="../index.html">Cerrar sesión</a>
+                    </article>
+                </li>
+                </ul>
+        </article>
+    </nav>
+
+        <a href="http://utn.ac.cr" target="_blank" title="Pagina oficial de la UTN"><img src="../Imagenes/UTN.png" alt="UTN" class="ImgEnlaces"></a>
+        <a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title="Avatar de la UTN"><img src="../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
+
+    </header><!-- /header -->
+
+<nav id="NavAdministrador">
+    <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link " href="../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="../Administracion/Administrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="../Anulacion/index.html">Anulación de vacaciones</a>
+  </li>
+ 
+   <li class="nav-item">
+    <a class="nav-link " href="../Administracion/Administrar-Usuarios/Adm-Usuarios.html"">Administrar usuarios</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link " href="../Administracion/Historial-General/index.html">Historial general</a>
+  </li> 
+
+   <li class="nav-item">
+    <a class="nav-link " href="../Administracion/reporte-mensual/index.html">Reporte mensual</a>
+  </li> 
+</ul>
+</nav>           
+  <div id="panel" class="panel panel-info">
+        <div id="encabezadoPanel" class="panel-heading">
+          <h4 align="center">Historial de vacaciones individual</h4> 
+        </div>
+        <div id="cuerpoPanel" class="panel-body">
+          <article class="table-responsive">
+            <table class="table table-bordered table-hover  nowrap" id="tabla" align="center">
+                 <thead id="encabezado" align="center" class="thead-dark">
+                    <tr>
+                        <th>Empleado</th>
+                        <th>Puesto</th>
+                        <th>Sede</th>
+                        <th>Fecha inicial</th>
+                        <th>Fecha final</th>
+                        <th>Cantidad de Días</th>
+                        <th>Estado</th>
+                        <th>Número de boleta</th>
+                    </tr>
+                </thead>
+                <tbody align="center">
+                    <tr>
+                        <td>Jane Doe</td>
+                        <td>S.O </td>
+                        <td>Liberia</td>
+                        <td>2015-05-2</td>
+                        <td>2015-05-3</td>
+                        <td>30</td>
+                        <td>Aprobada</td>
+                        <td>0013</td>
+                    </tr>
+                    <tr style="text-decoration: line-through;">
+                        <td>Jane Doe</td>
+                        <td>S.O </td>
+                        <td>Liberia</td>
+                        <td>2019-04-4</td>
+                        <td>2019-19-4</td>
+                        <td>15</td>
+                        <td>Aprobada</td>
+                        <td>0014</td>
+                    </tr>
+                     <tr>
+                        <td>Jane Doe</td>
+                        <td>S.O </td>
+                        <td>Cañas</td>
+                        <td>2019-04-4</td>
+                        <td>2019-09-4</td>
+                        <td>5</td>
+                        <td>Modificada</td>
+                        <td>0014</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Doe</td>
+                        <td>S.O </td>
+                        <td>Cañas</td>
+                        <td>2019-04-4</td>
+                        <td>2019-20-4</td>
+                        <td>16</td>
+                        <td>Rechazada</td>
+                        <td>0015</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </div>
+    <div class="panel-footer">
+      
+    </div>
+
+    <footer>
+      <ul>
+        <li>
+         <h6><a href="../Politicas/index.html">Politicas de uso</a></h6>
+      </li>
+
+      <li>
+        <h6 id="copy">&copy uTn </h6>
+      </li>
+      </ul>
+    </footer>
+
+  <!--html 5-->
+   <script src="../Administracion/DataTables/jQuery/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../Administracion/DataTables/DataTable/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../Administracion/DataTables/Buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="../Administracion/DataTables/JSZip/jszip.min.js" type="text/javascript"></script>
+    <script src="../Administracion/DataTables/pdfmake/pdfmake.js" type="text/javascript"></script>
+    <script src="../Administracion/DataTables/pdfmake/vfs_fonts.js" type="text/javascript"></script>
+    <script src="../Administracion/DataTables/Buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="../Administracion/DataTables/Buttons/js/buttons.print.min.js" type="text/javascript"></script>
+    
+    <!---->
+     <!--<script type="text/javascript" src="tabla.js"></script>-->
+  
+       <script type="text/javascript" src="filtros.js"></script>
+
+</body>
+
+</html>

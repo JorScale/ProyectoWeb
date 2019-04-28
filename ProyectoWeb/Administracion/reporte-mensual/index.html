@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte Mensual </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo.css">
+    <link rel="icon" href="../../Imagenes/UTN.png">
+    <link rel="icon" href="../../Iconos/favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+   
+    <link rel="shortcut icon" href="Icono/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../Iconos/favicon.ico" type="image/x-icon">
+    <!--tabla-->
+    <link rel="stylesheet" href="../DataTables/DataTable/css/jquery.dataTables.min.css">
+    <!-- botones -->
+    <link rel="stylesheet" href="../DataTables/Buttons/css/buttons.dataTables.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md sticky-top " role="navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="collapseMenu"> <i class="fas fa-bars fa-1x"></i></span>
+            </button>
+            <article class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav pull-xs-left ">
+                    <li class="nav-item">
+                        <a href="../../Home/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../Solicitar-Vacaciones/index.html" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../Historial individual/index.html" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class='fas fa-user-alt'> Francisco Espinoza</i>
+                        </a>
+                        <article class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../../Perfil/General/index.html">Perfil</a>
+                            <a class="dropdown-item" href="../../index.html">Cerrar sesión</a>
+                        </article>
+                    </li>
+                </ul>
+            </article>
+        </nav>
+        <section id="TituloPagina">
+            <h1 class="text-center">Vacaciones UTN</h1>
+        </section> <br>
+    </header><!-- /header -->
+    <nav id="NavAdministrador">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link " href="../../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../Administrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../../Anulacion/index.html">Anulación de vacaciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../Administrar-Usuarios/Adm-Usuarios.html">Administrar usuarios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../Historial-General/index.html">Historial general</a>
+            </li>
+            <li class="nav-item">
+                <a id="activeN" href="../reporte-mensual/index.html">Reporte mensual</a>
+            </li>
+        </ul>
+    </nav>
+    <br />
+    <h2 class="pb-5 pt-4 text-center alert alert-info col-sm-4 col-md-12">Historial Mensual</h2>
+    <section class="container-fluid">
+        <article class="table-responsive">
+            <table class="table table-bordered table-hover nowrap" id="reporte">
+                <thead class="thead-dark">
+                    <tr>
+                        <th># Cédula</th>
+                        <th>Nombre Empleado</th>
+                        <th>Fecha de vacaciones</th>
+                        <th>Dias que se le computan</th>
+                        <th>Periodo 2016 -2017</th>
+                        <th>Periodo 2017 -2018</th>
+                        <th>Periodo 2018 -2019</th>
+                        <th>Cantidad dias total</th>
+                        <th>Sede</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>150986051</td>
+                        <td>Ricardo Ruiz</td>
+                        <td>2019-04-4</td>
+                        <td>22</td>
+                        <td>19</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>400810523</td>
+                        <td>Jose Solis</td>
+                        <td>2019-05-4</td>
+                        <td>30</td>
+                        <td>15</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>504050137</td>
+                        <td>Gabriel Alvarado</td>
+                        <td>2019-06-4</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>502216632</td>
+                        <td>Daniela Araya</td>
+                        <td>2019-07-4</td>
+                        <td>22</td>
+                        <td>4</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>601700702</td>
+                        <td>Carlos Segura</td>
+                        <td>2019-05-4</td>
+                        <td>30</td>
+                        <td>8</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>202620099</td>
+                        <td>Angela Matamoros</td>
+                        <td>2019-06-4</td>
+                        <td>22</td>
+                        <td>13</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>301921497</td>
+                        <td>Luis Venegas</td>
+                        <td>2019-08-4</td>
+                        <td>22</td>
+                        <td>10</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>500760375</td>
+                        <td>Angelica Sanchez</td>
+                        <td>2019-09-4</td>
+                        <td>30</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>113770131</td>
+                        <td>Karla Murillo</td>
+                        <td>2019-07-4</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                    <tr>
+                        <td>402260628</td>
+                        <td>Juan Esquivel</td>
+                        <td>2019-08-4</td>
+                        <td>30</td>
+                        <td>15</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>49</td>
+                        <td>Guanacaste</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <footer>
+        <ul>
+            <li>
+                <h6><a href="../../Politicas/index.html">Politicas de uso</a></h6>
+            </li>
+            <li>
+                <h6 id="copy">&copy uTn </h6>
+            </li>
+        </ul>
+    </footer>
+    <!--bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--html 5-->
+    <script src="../DataTables/jQuery/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../DataTables/DataTable/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../DataTables/Buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="../DataTables/JSZip/jszip.min.js" type="text/javascript"></script>
+    <script src="../DataTables/pdfmake/pdfmake.js" type="text/javascript"></script>
+    <script src="../DataTables/pdfmake/vfs_fonts.js" type="text/javascript"></script>
+    <script src="../DataTables/Buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="../DataTables/Buttons/js/buttons.print.min.js" type="text/javascript"></script>
+    <!---->
+    <script type="text/javascript" src="../../js/reporteMensual.js"></script>
+</body>
+
+</html>

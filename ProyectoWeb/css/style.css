@@ -1,0 +1,40 @@
+ input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../Imagenes/calendar.png) no-repeat;
+    width: 20px;
+    height: 25px; 
+    
+}
+
+.widget {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px 20px;
+    background: #fff;
+    border-radius: .2rem;
+    box-shadow: 0 0 40px #f0f3ff;
+}
+
+#content {
+    position: relative;
+    min-height: 100%;
+    padding: 102px 40px 42px;
+    /* background-color: #fafbff; */
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+    line-height: inherit;
+    color: #6c7681;
+    border: 0;
+    border-bottom: 1px solid #d6dee5;
+    font-size: 15px;
+    font-weight: 400;
+}
+ 
+ 

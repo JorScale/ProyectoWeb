@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home </title>
+    <title>Vacaciones UTN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-    <link rel="stylesheet" href="../css/bootstrap.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,9 +15,6 @@
 
 <link rel="shortcut icon" href="../Iconos/favicon.ico" type="image/x-icon">
 <link rel="icon" href="../Iconos/favicon.ico" type="image/x-icon">
-<!-- Link para agregar Datetime Picker -->
-<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-<script src="js/bootstrap-datetimepicker.min.js"></script>
 
 </head>
 
@@ -30,35 +27,34 @@
         <article class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav pull-xs-left " >
                 <li class="nav-item">
-                    <a href="/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
+                    <a href="../Home/index.html" class="nav-link" id="activeN" title="Inicio"><i class="fas fa-home"> Inicio</i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
+                    <a href="../Solicitar-Vacaciones/index.html" title="Solicitar vacaciones" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
+                    <a href="../Historial individual/index.html" title="Historial personal" class="nav-link"><i class="fas fa-history"> Historial </i></a>
                 </li>
                </ul>
 
                <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        <i class='fas fa-user-alt'> Francisco Espinoza</i>
                     </a>
                     <article class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="perfil.html">Perfil</a>
-                        <a class="dropdown-item" href="#">Cuenta</a>
-                        <a class="dropdown-item" href="#">Cerra sesion</a>
+                        <a class="dropdown-item" href="../Perfil/General/index.html"> <b>Perfil </b></a>
+                        <a class="dropdown-item" href="../index.html"> <b>Cerrar sesión </b></a>
                     </article>
                 </li>
                 </ul>
         </article>
     </nav>
 
-        <a href="http://utn.ac.cr" target="_blank" title="Pagina oficial de la UTN"><img src="../Imagenes/UTN.png" alt="UTN" class="ImgEnlaces"></a>
-
-        <a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title="Avatar de la UTN"><img src="../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
-
+      <section id="TituloPagina">
+         <h1 class="text-center">Vacaciones UTN</h1>
+      </section> <br>
+       
     </header><!-- /header -->
 
 <nav id="NavAdministrador">
@@ -67,82 +63,73 @@
     <a class="nav-link " href="../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
   </li>
   <li class="nav-item">
-  <a class="nav-link" href="../Administracion/Aministrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
+  <a class="nav-link" href="../Administracion/Administrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link " href="#">Anulación de vacaciones</a>
+    <a class="nav-link " href="../Anulacion/index.html">Anulación de vacaciones</a>
   </li>
  
    <li class="nav-item">
-    <a class="nav-link " href="#">Administrar usuarios</a>
+    <a class="nav-link " href="../Administracion/Administrar-Usuarios/Adm-Usuarios.html">Administrar usuarios</a>
   </li>
     <li class="nav-item">
     <a class="nav-link " href="../Administracion/Historial-General/index.html">Historial general</a>
   </li> 
 
    <li class="nav-item">
-    <a class="nav-link " href="#">Reporte mensual</a>
+    <a class="nav-link " href="../Administracion/reporte-mensual/index.html">Reporte mensual</a>
   </li> 
 </ul>
-</nav>
+</nav> <br>
+<section class="container-fluid col-md-offset-1">
+        <section  class="col-lg-8  shadow mt-4 pb-3 bg-white shadow" id="tramitesPagina" >
+            <h2 class="pb-5 pt-4 text-center alert alert-info col-sm-4 col-md-12"> Tramites de la página </h2>
+            <article>
+                <h3 ><a href="../Solicitar-Vacaciones/index.html">Solicitud de vacaciones</a></h3>
+<p>En esta sección usted podrá llenar el formulario para la solicitud de vacaciones.</p>
+            </article> <br>
+            <article>
+                <h3><a href="../Perfil/General/index.html">Información personal</a></h3>
+              <p>En esta sección usted podrá ver información de su perfil, así como editar algunos datos de ser necesario.</p>
+            </article> <br>
+            <article>
+                <h3><a href="../Historial individual/index.html">Historial de vacaciones</a></h3>
+<p>En esta seccion usted podrá revisar el historial de vacaciones que tiene registradas en el sistema.</p>
+            </article> <br>
+        </section>
 
-    <section class="container-fluid">
-        <aside id="MenuLateral" class="col-sm-2">
+        <aside id="MenuLateral" class=" col-lg-2 col-sm-2 col-md-offset-1 shadow mt-4 pb-3 bg-white shadow">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#"> <i class="far fa-address-book"> Contacto </i></a>
+                 <a class="nav-link" data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false" aria-controls="collapseContacto">
+                   <i class="far fa-address-book"> <b>Contacto </b> </i> </a>
+                      <article class="collapse" id="collapseContacto">
+                         <article class="card card-body">
+                            <b>2668 3500 ext(5032)</b>
+                         </article>
+                      </article>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> <script>   
+                  <a class="nav-link" href="http://utn.ac.cr" target="_blank"> <i class="fas fa-university"> UTN </i> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" > <i class="fas fa-book"> Avatar </i> </a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="#"> <i class="far fa-calendar-alt">  <b><script> 
                     var f = new Date();
                     document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-                    </script> </i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="far fa-envelope"> Notificaciones</i> </a>
+                    </script> </b> </i></a>
                 </li>
             </ul>
         </aside>
-        <section  class="col-sm-8" id="tramitesPagina">
-            <h1 align="center">
-                TRAMITES DE LA PAGINA
-            </h1><!-- /header -->
-            <article>
-                <h2 ><a href="#">Solcitud de vacaciones</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </article>
-            <article>
-                <h2><a href="#">Informacion personal</a></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </article>
-            <article>
-                <h2><a href="#">Historial de vacaciones</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            </article>
-        </section>
     </section>
     <br> <br>
 
-    <footer>
+    <footer class="fixed-bottom">
       <ul>
         <li>
-         <h6><a href="#">Politicas de uso</a></h6>
+         <h6><a href="../Politicas/index.html">Politicas de uso</a></h6>
       </li>
 
       <li>
