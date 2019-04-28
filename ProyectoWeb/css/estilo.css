@@ -111,10 +111,7 @@ footer ul li a:hover{
 	color: white;
 }
 
-aside, section section{
-	border: 1px solid lightblue;
-	border-radius: 5px;
-}
+
 
 .collapseMenu{
 	color: #fff;
