@@ -2,11 +2,14 @@
 <html lang="es">
 
 <head>
+
   <meta charset="UTF-8">
-  <title>Administracion Solicitudes</title>
+  <title>Vacaciones UTN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/estilo.css">
   <link rel="stylesheet" href="estilo.css">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -39,32 +42,31 @@
           <a href="../../Historial individual/index.html" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
         </li>
       </ul>
-
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item dropdown">
           <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <i class='fas fa-user-alt'> Wilberth González</i>
          </a>
          <article class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../../Perfil/General/index.html">Perfil</a>
-          <a class="dropdown-item" href="../../Perfil/Editar/index.html">Editar perfil</a>
-          <a class="dropdown-item" href="../../index.html">Cerrar sesion</a>
+          <a class="dropdown-item" href="../../Perfil/General/index.html"><b>Perfil</b></a>
+          <a class="dropdown-item" href="../../index.html"><b>Cerrar sesion</b></a>
         </article>
       </li>
     </ul>
   </article>
 </nav>
-<a href="http://utn.ac.cr" target="_blank" title=""><img src="../../Imagenes/UTN.png" alt="UTN" class="ImgEnlaces"></a>
-
-<a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title=""><img src="../../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
+  <section id="TituloPagina">
+          <h1 class="text-center">Vacaciones UTN</h1>
+      </section> <br>
 </header><!-- /header -->
+
 <nav id="NavAdministrador">
   <ul class="nav justify-content-center">
     <li class="nav-item">
       <a class="nav-link " href="../../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
     </li>
     <li class="nav-item">
-      <a id="activeN" href="#">Administrar solicitudes <span class="badge badge-light">4</span></a>
+      <a id="activeN" href="#">Administrar solicitudes <span class="badge badge-light">4</span></a
     </li>
     <li class="nav-item">
       <a class="nav-link " href="../../Anulacion/index.html">Anulación de vacaciones</a>
@@ -82,25 +84,24 @@
     </li> 
   </ul>
 </nav>
-<h1 id="titulo">Administrar solicitudes</h1>
-<br/>
-<section class="container-fluid">
-  
-  <article >
-    <table class="table table-bordered table-hover " id="mydata">   
+<section class="container-fluid col-lg-11 shadow mt-4 pb-3 bg-white shadow" style="margin-right: 50px; margin-left: 50px;">
+      <article>
+        <h2 class="pb-5 pt-4 text-center alert alert-info col-md-12"> Administrar solicitudes </h2>
+      </article>
+    <article>
+    <table class="table table-bordered table-hover " id="mydata" border="2" id="Historial">   
       <thead class="thead-dark">
+        
         <tr>
-          <th class="thCortas">N° Boleta</th>
-          <th class="thCortas">N° Cédula</th>
-          <th >Nombre del Solicitante</th>
-          <th class="thMedianas">Fecha Solicitud</th>
-          <th class="thMedianas">Fecha Inicial</th>
-          <th class="thMedianas">Fecha Final</th>
-          <th class="thMedianas">Fecha Regreso</th>
-          <th class="thCortas">Días solicitados</th>
-          <th class="thMedianas">Área</th>
-          <th class="thCortas">Días Disponibles</th>
-          <th class="thCortas">Estado</th>
+          <th class="thCortas">Boleta</th>
+          <th class="thCortas">Cédula</th>
+          <th >Nombre de Solicitante</th>
+          <th class="thCortas">Fecha solicitud</th>
+          <th class="thCortas">Fecha inicial</th>
+          <th class="thCortas">Fecha final</th>
+          <th class="thCortas">Fecha regreso</th>
+          <th class="thCortas">Días solitados</th>
+          <th class="thCortas">Días disponibles</th>
           <th class="Opcion">Opciones</th>                                    
         </tr>
       </thead>
@@ -114,10 +115,24 @@
          <td>01-01-2019</td>
          <td>01-01-2019</td>
          <td>14</td>
-         <td>Docencia</td> 
          <td>14</td>
-         <td>Pendiente</td>
-         <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>  
+         <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td>  
        </tr>
        <tr>
          <td>2</td>
@@ -128,10 +143,24 @@
          <td>02-02-2019</td>
          <td>02-02-2019</td>
          <td>14</td>
-         <td>Ingles</td> 
          <td>14</td>
-         <td>Pendiente</td>
-         <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td> 
+         <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td>  
        </tr>
        <tr>
         <td>4</td>
@@ -142,10 +171,24 @@
         <td>03-03-2019</td>
         <td>03-03-2019</td>
         <td>14</td>
-        <td>TI</td>
         <td>14</td>
-        <td>Pendiente</td>
-        <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>
+        <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td> 
       </tr>
       <tr>
        <td>14</td>
@@ -156,10 +199,24 @@
        <td>04-04-2019</td>
        <td>04-04-2019</td>
        <td>14</td>
-       <td>TI</td>  
        <td>14</td>
-       <td>Pendiente</td>
-       <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td> 
+       <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td>  
      </tr>
      <tr>
       <td>15</td>
@@ -170,10 +227,24 @@
       <td>05-05-2019</td>
       <td>05-05-2019</td>
       <td>14</td>
-      <td>TI</td>
       <td>14</td>
-      <td>Pendiente</td>
-      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>  
+      <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td>   
     </tr>
     <tr>
       <td>16</td>
@@ -184,10 +255,24 @@
       <td>06-06-2019</td>
       <td>06-06-2019</td>
       <td>14</td>
-      <td>Ingles</td>
       <td>14</td>
-      <td>Pendiente</td>
-      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>  
+      <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td> 
     </tr>
     <tr>
       <td>18</td>
@@ -198,10 +283,24 @@
       <td>07-07-2019</td>
       <td>07-07-2019</td>
       <td>14</td>
-      <td>Ingles</td>
       <td>14</td>
-      <td>Pendiente</td>
-      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>  
+      <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td> 
     </tr>
     <tr>
       <td>19</td>
@@ -212,10 +311,24 @@
       <td>08-08-2019</td>
       <td>08-08-2019</td>
       <td>14</td>
-      <td>Administracion</td>
       <td>14</td>
-      <td>Pendiente</td>
-      <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td> 
+      <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td> 
     </tr>
     <tr>
      <td>20</td>
@@ -226,10 +339,24 @@
      <td>09-09-2019</td>
      <td>09-09-2019</td>
      <td>14</td>
-     <td>Docencia</td>
      <td>14</td>
-     <td>Pendiente</td>
-     <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td> 
+     <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td> 
    </tr>
    <tr>
     <td>21</td>
@@ -240,10 +367,24 @@
     <td>10-10-2019</td>
     <td>10-10-2019</td>
     <td>14</td>
-    <td>Docencia</td>
     <td>14</td>
-    <td>Pendiente</td>
-    <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>
+    <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td> 
   </tr>
   <tr>
     <td>31</td>
@@ -254,10 +395,24 @@
     <td>11-11-2019</td>
     <td>11-11-2019</td>
     <td>14</td>
-    <td>Docencia</td> 
     <td>14</td>
-    <td>Pendiente</td>
-    <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>
+   <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+          </td>
   </tr>
   <tr>
    <td>32</td>
@@ -268,10 +423,24 @@
    <td>12-12-2019</td>
    <td>12-12-2019</td>
    <td>14</td>
-   <td>Decano</td> 
    <td>14</td>
-   <td>Pendiente</td>
-   <td><span><button class="btn btn-success btn-sm" id="btnAceptarAdmSol">Aceptar</button ></span><span><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol">Denegar</button></span><span><a href="Formulario.html"><button class="btn btn-primary btn-sm" id="btnImprimir" >Imprimir</button ></a></span></td>
+   <td>
+            <span>
+                <button class="btn btn-success btn-sm" id="btnAceptarAdmSol" data-toggle="tooltip"data-placement="top" title="Aceptar">
+                  <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+              </span>
+            <span>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" id="btnDenegarAdmSol" data-toggle="tooltip" data-placement="top" title="Denegar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span>
+            <span><a href="Formulario.html" >
+                <button class="btn btn-light btn-sm" id="btnImprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button ></a>
+            </span>
+    </td>
  </tr>
 </tbody>
 </table>
@@ -288,15 +457,14 @@
   </ul>
 </footer>
 <!--bootstrap -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!--script src="../DataTables/DataTable/js/dataTables.bootstrap.js" type="text/javascript"></script-->
-<!--html 5-->
 <script src="../DataTables/jQuery/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="../DataTables/DataTable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src=" https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js" type="text/javascript"></script>
-<!---->
+<script src="../DataTables/Buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+<script src="../DataTables/JSZip/jszip.min.js" type="text/javascript"></script>
+<script src="../DataTables/pdfmake/pdfmake.js" type="text/javascript"></script>
+<script src="../DataTables/pdfmake/vfs_fonts.js" type="text/javascript"></script>
+<script src="../DataTables/Buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+<script src="../DataTables/Buttons/js/buttons.print.min.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="../../js/administrarSolicitud.js"></script>
 <script type="text/javascript" src="../../js/imprimirDatos.js"></script>
@@ -322,8 +490,8 @@ aria-hidden="true">
           <h3>BOLETA DE SOLICITUD DE VACACIONES</h3>
         </article>
         <article class="form-group col-md-3">
-          <label for="Fecha">N° boleta</label>
-          <input type="text" class="form-control" id="Fecha" value="120420"readonly>
+          <label for="Boleta">N° boleta</label>
+          <input type="text" class="form-control" id="Boleta" readonly>
         </article>
       </article>
 
@@ -335,10 +503,6 @@ aria-hidden="true">
         <article class="form-group col-md-12">
           <label for="Cédula">Cédula</label>
           <input type="text" class="form-control" id="Cédula" readonly>
-        </article>
-        <article class="form-group col-md-12">
-          <label for="Departamento">Departamento</label>
-          <input type="text" class="form-control" id="Departamento" readonly>
         </article>        
       </article>
       <article class="row">
@@ -363,7 +527,7 @@ aria-hidden="true">
         <article class="form-group col-md-12">
           <label for="Observaciones">Observaciones</label>
           <br>
-          <textarea style="width: 100%;" ></textarea>
+          <textarea style="width: 100%; resize: none;"  ></textarea>
         </article>
       </article>
 
@@ -371,8 +535,8 @@ aria-hidden="true">
     </form>
     </article>
     <article class="modal-footer">
-      <button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button>
-      <button type="submit" class="btn btn-success">Enviar</button>
+      <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Cerrar">Cerrar</button>
+      <button type="submit" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Enviar">Enviar</button>
     </article>
   </article>
 </article>
@@ -382,4 +546,5 @@ aria-hidden="true">
 </body>
 
 </html>
+
 
