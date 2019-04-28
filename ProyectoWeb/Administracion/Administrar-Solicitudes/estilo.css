@@ -3,9 +3,8 @@
 #btnDenegarAdmSol {
 	margin: 1px;
 	text-align: center;
-	background: red; 
 	padding: 2px;
-	width: 55px;
+	width: 40px;
 	height: 30px;
 	font-size: 12px;
 	font-family: sans-serif;
@@ -14,9 +13,8 @@
 #btnAceptarAdmSol {
 	margin: 1px;
 	text-align: center;
-	background: green; 
 	padding: 2px;
-	width: 50px;
+	width: 40px;
 	height: 30px;
 	font-size: 12px;
 	font-family: sans-serif;
@@ -26,10 +24,11 @@
 	margin: 1px;
 	text-align: center;
 	padding: 2px;
-	width: 50px;
+	width: 40px;
 	height: 30px;
 	font-size: 12px;
 	font-family: sans-serif;
+	border-color: gray;
 }
 
 .modal-header {
@@ -37,11 +36,11 @@
 }
 
 .Opcion {
-	width: 158px;
+	width: 120px;
 }
 
 .thCortas {
-	width: 30px;
+	width: 15px;
 }
 .thMedianas {
 	width: 60px;
@@ -61,5 +60,16 @@ h5, h3{
 	color: blue;
 	text-align: center;
 }
+
+textarea {
+max-height:79.9%;
+min-height:79.9%;
+max-width:99.9%;
+min-width:99.9%;
+border-radius: 0.5em;
+border: 1.5px solid lightgray;
+}
+
+
 
 
