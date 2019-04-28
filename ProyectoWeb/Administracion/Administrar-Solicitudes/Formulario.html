@@ -98,7 +98,7 @@
  				<article class="form-group col-md-12">
  					<label for="Observaciones">Observaciones</label>
  					<br>
- 					<textarea style="width: 1490px;" readonly=""></textarea>
+ 					<textarea style="resize: none; " ></textarea>
  				</article>
  			</article>
 
@@ -179,17 +179,17 @@
  					<input type="text" class="form-control" id="FechaRevision" readonly>
  				</article>
                 <article class="form-group col-md-2">
-                    <label for="FechaRevision">Aprobación de Jefe</label>
-                    <input type="text" class="form-control" id="FechaRevision" value="Pendiente"readonly>
+                    <label for="FechaRevision">Resolución</label>
+                    <input type="text" class="form-control" id="FechaRevision" value="" readonly>
                 </article>
  			</article>
  		</form>
-            <button type="button" class="btn-primary btn-sm" onclick="window.print();">Imprimir</button>
-            <a href="index.html"><button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button></a>
+            <button type="button" class="btn btn-primary btn-sm" onclick="window.print();" data-toggle="tooltip" data-placement="top" title="Imprimir">Imprimir</button>
+            <a href="index.html"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Cerrar">Cerrar</button></a>
  	</section>
 
  	<footer> </footer>
 
 
  </body>
- </html>	
+ </html>		
