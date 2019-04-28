@@ -1,0 +1,14 @@
+#ImgUTN{
+	border: none;
+	size: 80px;
+}
+
+h5, h3{
+	text-align: center;
+	font-family: monospace;
+}
+
+#titulo{
+	color: blue;
+	text-align: center;
+}

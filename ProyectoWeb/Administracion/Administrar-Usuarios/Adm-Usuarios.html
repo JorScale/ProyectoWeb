@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RRHH| Administrar Usuarios </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="shortcut icon" href="../../Iconos/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../../Iconos/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+          <nav class="navbar navbar-expand-md sticky-top " role="navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="collapseMenu"> <i class="fas fa-bars fa-1x"></i></span>
+        </button>
+        <article class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav pull-xs-left " >
+                <li class="nav-item">
+                    <a href="../../Home/index.html" class="nav-link" title=""><i class="fas fa-home"> Inicio</i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../Solicitar-Vacaciones/index.html" title="" class="nav-link"><i class="fas fa-briefcase"> Solicitar </i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../Historial individual/index.html" title="" class="nav-link"><i class="fas fa-history"> Historial </i></a>
+                </li>
+               </ul>
+
+               <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class='fas fa-user-alt'>Jane Doe</i>
+                    </a>
+                    <article class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../../Perfil/General/index.html">Perfil</a>
+                        <a class="dropdown-item" href="../../Perfil/Editar/index.html">Editar perfil</a>
+                        <a class="dropdown-item" href="../../index.html">Cerrar sesión</a>
+                    </article>
+                </li>
+                </ul>
+        </article>
+    </nav>
+
+        <section id="TituloPagina">
+         <h1 class="text-center">Vacaciones UTN</h1>
+      </section> <br>
+
+    </header><!-- /header -->
+
+<nav id="NavAdministrador">
+    <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link " href="../../RegistrarUsuarios/index.html">Registrar usuario <span class="badge badge-light">3</span></a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="../Administrar-Solicitudes/index.html">Administrar solicitudes <span class="badge badge-light">4</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="../../Anulacion/index.html">Anulación de vacaciones</a>
+  </li>
+ 
+   <li class="nav-item">
+    <a id="activeN" href="javascript:location.reload()">Administrar usuarios</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link " href="../Historial-General/index.html">Historial general</a>
+  </li> 
+
+   <li class="nav-item">
+    <a class="nav-link " href="../reporte-mensual/index.html">Reporte mensual</a>
+  </li> 
+</ul>
+</nav>
+
+    <section class="container-fluid col-lg-8 col-md-offset-2 shadow mt-4 pb-3 bg-white shadow">
+      <article>
+        <h2 class="pb-5 pt-4 text-center alert alert-info col-md-12"> Administración de Usuarios </h2>
+      </article>
+          <form id="formulario" name="formulario" method="post" action="Codigo.php">
+          <input type="submit" id="btnElimTodos" value="Eliminar Seleccionados" class="btn btn-danger"  disabled="true" onclick="borrarSele()"/>
+    <table id="tablaUsuarios" class="table table-responsive text-center table-hover" border="2" >
+      <colgroup>
+       <col style="width: 4%"/>
+      <col style="width: 17%"/>
+      <col style="width: 18%"/>
+      <col style="width: 14%"/>
+      <col style="width: 18%"/>
+      <col style="width: 13%"/>
+      <col style="width: 18%"/>
+      </colgroup>
+        <thead class="thead-dark text-white">
+        <tr>
+        <th class="text-center">Selección</th>
+        <th class="text-center">N° Identificación</th>
+        <th class="text-center">Usuario</th>
+        <th class="text-center">Puesto</th>
+        <th class="text-center">Departamento</th>
+        <th class="text-center">Rol</th>
+        <th class="text-center">Opciones</th>
+        </tr>
+        </thead>
+      <tbody id="tabla">
+        <tr>
+          <td><input type="checkbox" id="seleccion1"></td>
+          <td id="Cédula">115940673</td>
+          <td id="Nombre">Andres Alfaro</td>
+           <td id="Puesto">Profesor</td>
+          <td id="Departamento">Docencia</td>
+          <td id="Cargo">Usuario</td>
+          <td>
+<span><button type="button" class="btn btn-info glyphicon glyphicon-edit btnEditarAdmUsu" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="margin-right: 6px"></button></span><span><button type="button" class="btn btn-danger borrar glyphicon glyphicon-trash" id="borrar"></button></span>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="seleccion1"></td>
+          <td id="Cédula" name="Cédula">566643456</td>
+          <td id="Nombre" name="Nombre">Carlos</td>
+          <td id="Puesto">Profesor</td>
+          <td id="Departamento">Docencia</td>
+          <td id="Cargo">Usuario</td>
+          <td>
+<span><button type="button" class="btn btn-info glyphicon glyphicon-edit btnEditarAdmUsu" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="margin-right: 6px"></button></span><span><button type="button" class="btn btn-danger borrar glyphicon glyphicon-trash" id="borrar"></button></span>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="seleccion1"></td>
+          <td id="Cédula" name="Cédula">707770777</td>
+          <td id="Nombre" name="Nombre">Ashley Barrantes</td>
+           <td id="Puesto">Profesor</td>
+          <td id="Departamento">Docencia</td>
+          <td id="Cargo">Usuario</td>
+          <td>
+<span><button type="button" class="btn btn-info glyphicon glyphicon-edit btnEditarAdmUsu" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"  style="margin-right: 6px"></button></span><span><button type="button" class="btn btn-danger borrar glyphicon glyphicon-trash" id="borrar"></button></span>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="seleccion1"></td>
+          <td id="Cédula" name="Cédula">606660666</td>
+          <td id="Nombre" name="Nombre">Francisco</td>
+          <td id="Puesto">Profesor</td>
+          <td id="Departamento">Docencia</td>
+          <td id="Cargo">Usuario</td>
+          <td>
+<span><button type="button" class="btn btn-info glyphicon glyphicon-edit btnEditarAdmUsu" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="margin-right: 6px"></button></span><span><button type="button" class="btn btn-danger borrar glyphicon glyphicon-trash" id="borrar"></button></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   </form>
+    </section>
+    <br> <br>
+
+    <footer class="fixed-bottom">
+      <ul>
+        <li>
+         <h6><a href="../../Politicas/index.html">Políticas de uso</a></h6>
+      </li>
+
+      <li>
+        <h6 id="copy">&copy uTn </h6>
+      </li>
+      </ul>
+       
+    </footer>
+
+  
+
+    <!--datatables-->
+ <link rel="stylesheet" href="../DataTables/DataTable/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+<script type="text/javascript" src="filtros.js"></script>
+<!--datatables-->
+
+<article class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" 
+aria-hidden="true" data-backdrop="static">
+<article class="modal-dialog" role="document">
+  <article class="modal-content">
+    <article class="modal-header">
+      <h3 class="modal-title" id="exampleModalLabel">EDITAR </h3>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </article>
+    <article class="modal-body">
+                  <form id='form1' class="form-container" method="get" action="#">
+      
+      <article class="row">
+        <article class="form-group col-md-12">
+          <h3>DETALLES DE USUARIO</h3>
+        </article>
+      </article>
+
+      <article class="row">
+        <article class="form-group col-md-12">
+          <label for="Cédula">N° Identificación</label>
+          <input type="text" class="form-control txtCédula" readonly>
+        </article>
+        <article class="form-group col-md-12">
+          <label for="Nombre">Usuario</label>
+          <input type="text" class="form-control txtNombre" readonly>
+        </article>
+        <article class="form-group col-md-12">
+          <label for="Puesto">Puesto</label>
+          <input type="text" class="form-control txtPuesto" id="Puesto">
+        </article>
+        <article class="form-group col-md-12">
+          <label for="Departamento">Departamento</label>
+          <input type="text" class="form-control txtDepa" id="Departamento">
+        </article>
+        <article class="form-group col-md-12">
+          <label for="Cargo">Rol</label>
+          <input type="text" class="form-control txtCargo" id="Cargo">
+        </article>        
+      </article>         
+    </form>
+    </article>
+    <article class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button>
+      <button type="submit" class="btn btn-success" onclick="guardarDatos()">Enviar</button>
+    </article>
+  </article>
+</article>
+</article>
+</body>
+
+</html>

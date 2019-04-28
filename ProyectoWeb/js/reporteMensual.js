@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#Historial').DataTable({
+    $('#reporte').DataTable({
         dom: 'Bfrtip',
         buttons: [{
                 extend: 'excelHtml5',
@@ -33,3 +33,15 @@ $(document).ready(function() {
         }
     });
 });
+
+
+/*
+ 
+     dom: 'Bfrtip',
+    buttons: [{
+        
+            'excelHtml5',
+            'pdfHtml5'
+    }
+    ]
+*/

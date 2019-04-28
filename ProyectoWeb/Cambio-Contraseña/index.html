@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="español">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" type="imagen/png" href="../Imagenes/Logo.png">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/regular.css" integrity="sha384-FKw7x8fCxuvzBwOJmhTJJsKzBl8dnN9e2R4+pXRfYoHivikuHkzWyhKWDSMcGNK8" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/estilo-Contraseñas.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+<script type="text/javascript" src="../js/validacionesContraseña.js"></script>
+    <title>Restablecer Contraseña</title>
+  </head>
+  <body>
+  <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <img src="../Imagenes/Logo.png" class="img-responsive img-circle" width="75" height="75" /><br></br>
+  <a  style="text-decoration:none" class="navbar-brand">UNIVERSIDAD TÉCNICA NACIONAL</a>
+  <form class="form-inline my-2 my-lg-0 "></form>
+</nav>
+<nav class="nav btn-light covida">
+<a class="nav-link active" href="../Politicas/index.html">Terminos y condicines</a>
+  <!-- <a class="nav-link active" href="#">Inicio</a>
+ <a class="nav-link active" href="#">Contactenos</a> -->
+ 
+
+</nav>
+
+</div>
+
+<div class="container-fluid">
+<center>
+
+
+        <div class="col-sm-4 card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            
+              <div class="col-lg-15">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h2 text-gray-900 mb-4">Restablesca su contraseña</h1>
+                    <h2 class="h4 text-gray-900 mb-4">Ingrese los datos</h1>
+                  </div>
+                    <form name="formulario" method="get" action=""  onsubmit="return orden()">
+                    
+
+                    <div class="form-group">
+                    	<div class="col-lg-12">
+                      <label>Ingrese su codigo asignado:</label>
+                      <div class="input-group">
+                      <input type="text" class="form-control form-control-user input-responsive" id="txtCodigo" title="Por favor ingreso el dato solicitado" placeholder="Codigo" required><button id="btnche" type="button"onclick="validar()"><i class="fas fa-check"> </i></button></div>
+                      <i class="alerta" id="msj"></i>
+                  </div>
+                </div>
+                    <div class="form-group">
+                    	<div class="col-lg-12">
+                      <label>Ingrese la nueva contraseña:</label>
+                      <div class="input-group">
+
+                      <input type="password" class="form-control form-control-user input-responsive" id="txtPass_1" title="Por favor cumpla el formato" placeholder="Contraseña" required pattern="[A-Za-z0-9\@\#\$\&\*]+" minlength="8" disabled="true">
+                      	<button type="button" id="btn_1" onclick="ver(1)" disabled="true"><img id="img_1" src="../Iconos/v1.png" width="25" height="25"></button>
+                      </div>
+                      </div>
+                  </div>
+                    <div class="form-group">
+                    	<div class="col-lg-12">
+                      <label>Verifique su contraseña</label>
+                      <div class="input-group">
+                      <input type="password" class="form-control form-control-user input-responsive" id="txtPass_2" title="Por favor cumpla el formato" placeholder="Contraseña" required pattern="[A-Za-z0-9\@\#\$\&\*]+" minlength="8" disabled="true">
+                      
+                      <button type="button" id="btn_2" onclick="ver(2)" disabled="true"><img id="img_2" src="../Iconos/v1.png" width="25" height="25"></button>
+                  </div>
+                  </div>
+                    </div>
+                    
+                    <button id="btnActializa" disabled="true" type="submit" class="btn btn-primary btn-md btn-responsive btn-block"><i class="fas fa-location-arrow fa-fw"></i> Actualizar</button>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </center>
+
+
+<footer class="page-footer font-small pt-4 bg-primary">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left ">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase">Universidad Técnica Nacional</h5>
+          
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Correos<br> </h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="titulo" href="mailto:soporte.guanacaste@utn.ac.cr" class="correo">soporte.guanacaste@utn.ac.cr</a>              
+              </li>
+          </div>
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Telefonos<br> </h5>
+            <ul class="list-unstyled">
+              <li>
+               <div class="item-contact"><a class="titulo" href="tel:+506 2668 3500"><span class="link-id"></span><span>+506 2668 3500</span></a></div>
+            
+              </li>
+          </div>
+      
+          
+          <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019</div>
+    <!-- Copyright -->
+  </footer>
+</div>
+  <!-- Footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+<script src="../js/init.js"></script>
+    </div>
+    </div>
+  </body>
+</html>
