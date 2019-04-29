@@ -18,16 +18,16 @@ $('#tablaUsuarios').DataTable({
 //Llenar text de modal
     $(document).ready(function(){
   $('.btnEditarAdmUsu').click(function(){
-    $valor = $(this).parents("tr").find("td").eq(1).text();
-    $usu = $(this).parents("tr").find("td").eq(2).text();
+    $cedula = $(this).parents("tr").find("td").eq(1).text();
+    $usuario = $(this).parents("tr").find("td").eq(2).text();
     $puesto = $(this).parents("tr").find("td").eq(3).text();
-    $depa = $(this).parents("tr").find("td").eq(4).text();
-    $cargo = $(this).parents("tr").find("td").eq(5).text();
-    $('.txtCédula').val($valor);
-    $('.txtNombre').val($usu);
+    $departamento = $(this).parents("tr").find("td").eq(4).text();
+    $rol = $(this).parents("tr").find("td").eq(5).text();
+    $('.txtCédula').val($cedula);
+    $('.txtNombre').val($usuario);
     $('.txtPuesto').val($puesto);
-    $('.txtDepa').val($depa);
-    $('.txtCargo').val($cargo);
+    $('.txtDepartamento').val($departamento);
+    $('.txtRol').val($rol);
   });
 });
 

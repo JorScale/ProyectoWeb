@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>RRHH| Administrar Usuarios </title>
+    <title>Vacaciones UTN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/estilo.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
@@ -211,15 +211,30 @@ aria-hidden="true" data-backdrop="static">
         </article>
         <article class="form-group col-md-12">
           <label for="Puesto">Puesto</label>
-          <input type="text" class="form-control txtPuesto" id="Puesto">
+          <input list="ListaPuesto" value="" class="form-control txtPuesto">
+          <datalist id="ListaPuesto">
+          <option value="Profesor"></option>
+          <option value="Jefatura"></option>
+          <option value="RRHH"></option>
+          <option value="Activos"></option>
+          <option value="Transporte"></option>
+          </datalist>
         </article>
         <article class="form-group col-md-12">
           <label for="Departamento">Departamento</label>
-          <input type="text" class="form-control txtDepa" id="Departamento">
+          <input list="ListaDepartamento" value="" class="form-control txtDepartamento">
+          <datalist id="ListaDepartamento">
+          <option value="Docencia"></option>
+          <option value="Administrativo"></option>
+          </datalist>  
         </article>
         <article class="form-group col-md-12">
           <label for="Cargo">Rol</label>
-          <input type="text" class="form-control txtCargo" id="Cargo">
+          <input list="ListaRol" value="" class="form-control txtRol">
+          <datalist id="ListaRol">
+          <option value="Administrador"></option>
+          <option value="Usuario"></option>
+          </datalist>
         </article>        
       </article>         
     </form>
