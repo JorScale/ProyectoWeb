@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     <link rel="shortcut icon" href="../Iconos/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../Iconos/favicon.ico" type="image/x-icon">
 
@@ -50,17 +51,16 @@
                     </a>
                     <article class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="../Perfil/General/index.html">Perfil</a>
-                        <a class="dropdown-item" href="../Perfil/Editar/index.html">Editar perfil</a>
                         <a class="dropdown-item" href="../index.html">Cerrar sesión</a>
                     </article>
                 </li>
                 </ul>
         </article>
     </nav>
-
-        <a href="http://utn.ac.cr" target="_blank" title="Pagina oficial de la UTN"><img src="../Imagenes/UTN.png" alt="UTN" class="ImgEnlaces"></a>
-        <a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title="Avatar de la UTN"><img src="../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
-
+        
+      <section id="TituloPagina">
+         <h1 class="text-center">Vacaciones UTN</h1>
+      </section> <br>
     </header><!-- /header -->
 
 <nav id="NavAdministrador">
@@ -87,12 +87,10 @@
   </li> 
 </ul>
 </nav>           
-  <div id="panel" class="panel panel-info">
-        <div id="encabezadoPanel" class="panel-heading">
-          <h4 align="center">Historial de vacaciones individual</h4> 
-        </div>
-        <div id="cuerpoPanel" class="panel-body">
-          <article class="table-responsive">
+        <section class="container-fluid">
+        <section  class="col-lg-12  shadow mt-4 pb-3 bg-white shadow" id="tramitesPagina" >
+            <h2 class="pb-5 pt-4 text-center alert alert-info col-sm-4 col-md-12"> Historial de vacaciones</h2>
+            <article class="table-responsive">
             <table class="table table-bordered table-hover  nowrap" id="tabla" align="center">
                  <thead id="encabezado" align="center" class="thead-dark">
                     <tr>
@@ -150,11 +148,9 @@
                 </tbody>
             </table>
         </article>
-    </div>
-    <div class="panel-footer">
-      
-    </div>
-
+     </section>
+     </section>
+                                                              
     <footer>
       <ul>
         <li>
