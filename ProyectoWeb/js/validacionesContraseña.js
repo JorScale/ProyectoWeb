@@ -42,6 +42,21 @@ document.formulario.txtPass_2.style.background=color;
 function orden(){
 var clave_1 = document.getElementById('txtPass_1').value;	
 var clave_2 = document.getElementById('txtPass_2').value;
+	
+var espacios = false;
+var cont = 0;
+ 
+while (!espacios && (cont < clave_1.length || cont < clave_2.length)) {
+  if (clave_1.charAt(cont) == " " || clave_2.charAt(cont) == " ")
+    espacios = true;
+  cont++;
+}
+ 
+if (espacios) {
+  alert ("La contraseña no puede contener espacios en blanco");
+  return false;
+}	
+	
 	if (clave_1==clave_2) {
 		change('#28a745');
 	 return true;
