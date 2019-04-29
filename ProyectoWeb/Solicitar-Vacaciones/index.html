@@ -30,6 +30,8 @@
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- <link id="anima" rel="stylesheet" type="text/css" href="../css/application.min.css"> -->
 </head>
 
 <body onload="fechaactual();">
@@ -91,7 +93,15 @@
         </ul>
     </nav>
     <br/>
-     <h1 class="text-center" id="titulo">Solicitud de vacaciones</h1>
+    <article class="row ">
+      <article class="col-md-1">
+        </article>
+      <article class="col-md-10">
+    <h2 class="text-center alert alert-info"> Solicitud de Vacaciones </h2>
+     </article>
+     <article class="col-md-1">
+        </article>
+  </article>
      <br/>
   <section class="container-fluid">
     <form id='form1' class="form-container" method="get" action="#">
@@ -107,7 +117,7 @@
         </article>
         <article class="form-group col-md-1">
           <label for="Fecha">N° boleta</label>
-          <input type="text" class="form-control" id="Fecha" value="120420" readonly>
+          <input type="text" class="form-control" id="Fecha" value="2019-1" readonly>
         </article>
       </article>
 
@@ -208,7 +218,7 @@
           <input type="number"  class="form-control" id="DiasDisfrutar" >
         </article>
       </article>
-      <h3 style="animation-delay: 2s; -webkit-animation-delay: 1s;" class="animated fadeInUp">VACACIONES PROPORCIONALES</h4>
+      <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInUp">VACACIONES PROPORCIONALES</h4>
       <article class="row">
         <article class="form-group col-md-2">
           <label for="Periodo">Período</label>
@@ -284,6 +294,8 @@
     <script>	
     	function fechaactual(){
     		document.getElementById("FechaSolicitud").value = moment().format('DD/MM/YYYY');
+
+     
     	}
     	
     </script>
@@ -367,6 +379,7 @@ setTimeout(function() {
   }
  
 </script>
+
 
  
  </body>
