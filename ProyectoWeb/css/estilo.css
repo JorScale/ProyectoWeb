@@ -8,6 +8,10 @@ body{
 	
 }
 
+datalist{
+	display: none;
+}
+
 .ImgEnlaces{
 	width: 80px;
 	height: 80px;
