@@ -87,3 +87,21 @@ function codigo(){
 alert(aleatorio);
 return aleatorio;
 }
+
+
+
+
+
+//validaciones de usuario
+
+function usuario(){
+
+var texto= document.getElementById('txtUsuario').value;
+	if(texto ==""){
+		alert("hola");
+document.getElementById('btnBusca').href="";
+	}else{
+		document.getElementById('btnBusca').href='../Cambio-Contraseña/index.html';
+	}
+
+}
