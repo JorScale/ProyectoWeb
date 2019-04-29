@@ -98,7 +98,7 @@ function usuario(){
 
 var texto= document.getElementById('txtUsuario').value;
 	if(texto ==""){
-		alert("hola");
+		alert("Este campo es obligatorio");
 document.getElementById('btnBusca').href="";
 	}else{
 		document.getElementById('btnBusca').href='../Cambio-Contraseña/index.html';
