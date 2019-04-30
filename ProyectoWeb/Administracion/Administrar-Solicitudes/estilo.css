@@ -1,4 +1,7 @@
-
+@media print {
+  @page { margin: 0; }
+  body { margin: 2cm; }
+}
 
 #btnDenegarAdmSol {
 	margin: 1px;
