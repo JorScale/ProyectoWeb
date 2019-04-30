@@ -52,7 +52,21 @@
     }
 
     function DenegarSoli(e) {
-       $(this).parents("tr").find("td").eq(10).html('Denegada'); 
+       $(this).parents("tr").find("td").eq(10).html('Denegada');
+       $boleta = $(this).parents("tr").find("td").eq(0).text();
+          $cedula = $(this).parents("tr").find("td").eq(1).text();
+          $usuario = $(this).parents("tr").find("td").eq(2).text();
+          $solicitud = $(this).parents("tr").find("td").eq(3).text();
+          $inicio = $(this).parents("tr").find("td").eq(4).text();
+          $final = $(this).parents("tr").find("td").eq(5).text();
+          $regreso = $(this).parents("tr").find("td").eq(6).text();
+          $('#Boleta').val($boleta);
+          $('#Cédula').val($cedula);
+          $('#Nombre').val($usuario);
+          $('#FechaSolicitud').val($solicitud);
+          $('#FechaInicio').val($inicio);
+          $('#FechaFinal').val($final);
+          $('#FechaRegreso').val($regreso); 
     }
 
     
