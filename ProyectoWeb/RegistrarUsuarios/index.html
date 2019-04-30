@@ -41,7 +41,6 @@
                         </a>
                         <article class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../Perfil/General/index.html">Perfil</a>
-                            <a class="dropdown-item" href="../Perfil/Editar/index.html">Editar perfil</a>
                             <a class="dropdown-item" href="../index.html">Cerrar sesión</a>
                         </article>
                     </li>
@@ -49,8 +48,9 @@
             </article>    
         </nav>
 
-        <a href="http://utn.ac.cr" target="_blank" title="Pagina oficial de la UTN"><img src="../Imagenes/UTN.png" alt="UTN" class="ImgEnlaces"></a>
-        <a href="https://avatar.utn.ac.cr/avatar_utn/log/menu.jsp" target="_blank" title="Avatar de la UTN"><img src="../Imagenes/Avatar.png" alt="Avatar" id="logo" class="ImgEnlaces"></a>
+        <section id="TituloPagina">
+         <h1 class="text-center">Vacaciones UTN</h1>
+      </section> <br>
    </header><!-- /header -->
 
 	<nav  id="NavAdministrador">
@@ -76,140 +76,117 @@
 	    </ul>
 	</nav>
 
-    <section class="container-fluid">
-       <aside id="MenuLateral" class="col-sm-2">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                 <a class="nav-link active" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                   <i class="far fa-address-book"> Contacto </i> </a>
-                      <article class="collapse" id="collapseExample">
-                         <article class="card card-body">
-                            <b>2668 3500 ext(5032)</b>
-                         </article>
-                      </article>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> <i class="far fa-calendar-alt"> <script>   
-                    var f = new Date();
-                    document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-                    </script> </i></a>
-                </li>
-            </ul>
-        </aside>
-        <section  class="col-sm-7 col-sm-offset-1" id="tramitesPagina">
-            <section id="h1">
-            	<h1 align="center">
+    
+        <section  class="container-fluid col-lg-8 col-md-offset-2 shadow mt-4 pb-3 bg-white shadow" >
+            	<h1 class=" pb-5 pt-4 text-center alert alert-info col-md-12" align="center">
                		Registrar Usuario
             	</h1><!-- /header -->
-            </section>
-           
-            <section id="cont-tabla">
-              <table id="registro" class="table table-bordered table table-hover">
-                <thead class="table">
+    
+            <article id="table-responsive">
+              <table id="registro" class="table table-bordered table-hover  nowrap">
+                <thead  class="thead-dark">
                   <tr>
-                    <th>Nombre</th>
-                    <th>Cedula</th>
-                    <th>Confirmar</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Cedula</th>
+                    <th class="text-center">Confirmar</th>
                   </tr>
                 </thead>
                 <tbody>
 
                   <tr id="tabla1">
-                    <td>Francisco</td>
-                    <td>6-0666-0666</td>
-                    <td><button  type="button" class="btn btn-success">Si</button> <button onclick="ocultar('1')" type="button" class="btn btn-danger">No</button></td>
+                    <td  class="text-center">Francisco</td>
+                    <td class="text-center">6-0666-0666</td>
+                    <td><button  type="button" class="btn btn-success glyphicon glyphicon-ok"data-toggle="tooltip" data-placement="left" title="Aceptar Solicitud"></button> <button onclick="ocultar('1')" type="button"class=" btn btn-danger borrar glyphicon glyphicon-trash " data-toggle="tooltip" data-placement="rigth" title="Declinar Solicitud"></button></td>
                   </tr>
 
                   <tr id="tabla2">
-                    <td>Ashley</td>
-                    <td>7-0777-0777</td>
-                    <td><button  data-toggle="modal" data-target="#miModal" onclick="location.href='#miModal'"type="button" class="btn btn-success">Si</button> <button  type="button"  onclick="ocultar('2')"class="btn btn-danger">No</button></td>
+                    <td class="text-center">Ashley</td>
+                    <td class="text-center">7-0777-0777</td>
+                    <td><button  data-toggle="modal" data-target="#miModal" onclick="location.href='#miModal'"type="button" class="btn btn-success glyphicon glyphicon-ok"data-toggle="tooltip" data-placement="left" title="Aceptar Solicitud"></button> <button  type="button"  onclick="ocultar('2')"class="btn btn-danger borrar glyphicon glyphicon-trash"data-toggle="tooltip" data-placement="rigth" title="Declinar Solicitud"></button></td>
                   </tr>
 
                   <tr id="tabla3">
-                    <td>Andres</td>
-                    <td>8-0888-0888</td>
-                    <td><button  type="button" class="btn btn-success">Si</button> <button  onclick="ocultar('3')" type="button" class="btn btn-danger">No</button></td>
+                    <td class="text-center">Andres</td>
+                    <td class="text-center">8-0888-0888</td>
+                    <td><button  type="button" class="btn btn-success glyphicon glyphicon-ok"data-toggle="tooltip" data-placement="left" title="Aceptar Solicitud"></button> <button  onclick="ocultar('3')" type="button" class="btn btn-danger borrar glyphicon glyphicon-trash"data-toggle="tooltip" data-placement="rigth" title="Declinar Solicitud"></button></td>
                   </tr>
 
                 </tbody>
               </table>
-            </section><!--Tabla -->
+            </article><!--Tabla -->
 
         </section>
-    </section>
 
     <section class="modal fade " id="miModal" tabindex="-1" role="dialog" aria-hidden="true"data-backdrop="static" data-keboard="false">
 	    <section class=" modal-dialog modal-lg molda-md">
-	      	<section class="modal-content">   
+	      	<section  id="este"class="modal-content">   
 	        	<section  id="titulo-modal" class="modal-header col-md col-md-sx" > 
-	             	<h2 align="center" style="color: white">Registro</h2>  
+	             	<h2  id="h2"align="center">Registro</h2>  
 	        	</section>
 
-	        <section class="modal-body ">
+	        <section id="modal-body" class="modal-body">
 	            <section id="seccion-modal" class="container col-md" >
-	                <form name="form1" class="form row"  method="post">
-	                     <section class=" form-group col-auto " >
-	                  		<legend id=modal-legend>Datos Personales</legend>
-	                        <section id="input-section" class="col-md-3 col-md-12">
-	                           <label for="Nombre">Nombre</label>
-	                           <input  type="text " class="form-control " value="Ashley" id="Nombre" readonly>
-	                        </section>
-	                        <section id="input-section" class="col-md-3 col-md-offset-1  col-md-12">
-	                           <label for="apellido2">Apellido1</label>
-	                           <input type="text" class="form-control " value="Barrantes" id="Apellido1" readonly>
-	                        </section>
-	                        <section  id="input-section" class="col-md-3 col-md-offset-1 col-md-12">
-	                           <label for="apellido2">Apellido2</label>
-	                           <input type="text" class="form-control" value="Delgado" id="Apellido2" readonly>
-	                        </section>
-	                        <section id="input-section" class="col-md-3 col-md-12">
-	                           <label for="Cedula">Cedula</label>
-	                           <input type="text" class="form-control" value="7-0777-0777" id="Cedula" readonly>
-	                        </section>
-			                <section id="input-section" class="col-md-3 col-md-offset-1 col-md-12">
-			                   <label for="numerotelefono">Numero de Telefono</label>
-			                   <input type="text" class="form-control" value="88-49-79-91" id="NumeroTelefono"  readonly>
-			                   <title>"Digite el nombre"</title>
-			                </section>
-			                <section id="input-section" class="col-md-3 col-md-offset-1 col-md-12">
-			                   <label for="Correo">Correo</label>
-			                   <input type="text" class="form-control" value="Pitufa@gmail.com" id="Correo" readonly>
-			                   <title>"Digite el nombre"</title>
-			                </section>
-	                     </section>
+	                <form name="form1" id="form1" class="form-container row"  method="post">
+	                
 
-	                     <section   class="form-group col-auto">
-	                        <legend  id=modal-legend >Datos Laborales</legend>
-	                        <section id="input-section" class="col-md-3">
-			                  <label for="Fecha">Fecha de Contratación</label>
-			                  <input type="date" name="Fecha" required title="Digite la Fecha de contratación del usuario">
-	                        </section>
-	                        <section id="input-section" class="col-md-3 col-md-offset-1 col-md-12">
-	                           <label for="Grado">Titulo del puesto</label>
-	                           <input type="text" class="form-control" placeholder="Tecnico profecional 1" id="Titulo" required title="Digite el grado academico del usuario">
-	                        </section>
-	                        <section id="input-section" class="col-md-4 col-md-offset-1 col-md-12">
-	                            <label for="Departamento">Departamento o Carrera</label>
-	                            <input type="text" class="form-control" placeholder="Gestion del desarrollo Humano" id="Departamento" required title="Digite el departamento al que pertenece el usuario">
-	                        </section>
-	                     </section>
-	              
-	                     <section  class="form-group col-md">
-	                        <legend id=modal-legend >Datos de Usuario</legend>
-	                        <label for="tipo-user">Rol en la Pagina</label><br/>
-	                        <select required><br/>
-	                            <option  value="" selected disabled>Elija una opción</option>}
-	                            <option value="Usuario">Usuario</option>}
-	                            <option value="Admintrador">Administrador</option>}
-	                        </select>
-	                     </section>
+		                  	
+		                  		<legend id=modal-legend>Datos Personales</legend>
+		                        <section id="input-section" class="col-lg-3 ">
+		                           <label for="Nombre">Nombre</label>
+		                           <input  type="text " class="form-control " value="Ashley" id="Nombre" readonly>
+		                        </section>
+		                        <section id="input-section" class="col-lg-3 col-md-offset-1 ">
+		                           <label for="apellido2">Apellido1</label>
+		                           <input type="text" class="form-control " value="Barrantes" id="Apellido1" readonly>
+		                        </section>
+		                        <section  id="input-section" class="col-lg-3 col-md-offset-1 ">
+		                           <label for="apellido2">Apellido2</label>
+		                           <input type="text" class="form-control" value="Delgado" id="Apellido2" readonly>
+		                        </section>
+		                        <section id="input-section" class="col-lg-3 ">
+		                           <label for="Cedula">Cedula</label>
+		                           <input type="text" class="form-control" value="7-0777-0777" id="Cedula" readonly>
+		                        </section>
+				                <section id="input-section" class="col-lg-3 col-md-offset-1 ">
+				                   <label for="numerotelefono">Numero de Telefono</label>
+				                   <input type="text" class="form-control" value="88-49-79-91" id="NumeroTelefono"  readonly>
+				                </section>
+				                <section id="input-section" class="col-lg-3 col-md-offset-1 ">
+				                   <label for="Correo">Correo</label>
+				                   <input type="text" class="form-control" value="Pitufa@gmail.com" id="Correo" readonly>
+				                </section>
+		                  	 
+
+		                   
+		                        <legend  id="modal-legend" >Datos Laborales</legend>
+		                        <section id="input-section" class="col-lg-3">
+				                  <label for="Fecha">Fecha Contratación</label>
+				                  <input  class="form-control" type="date" name="Fecha" required title="Digite la Fecha de contratación del usuario">
+		                        </section>
+		                        <section id="input-section" class="col-lg-3 col-md-offset-1 ">
+		                           <label for="Titulo">Titulo del puesto</label>
+		                           <input type="text" class="form-control" placeholder="Tecnico profecional 1" id="Titulo" required title="Digite el grado academico del usuario">
+		                        </section>
+		                        <section id="input-section" class="col-lg-4 col-md-offset-1 ">
+		                            <label for="Departamento">Departamento</label>
+		                            <input type="text" class="form-control" placeholder="Gestion del desarrollo Humano" id="Departamento" required title="Digite el departamento al que pertenece el usuario">
+		                        </section>
+
+		                        <legend id=modal-legend >Datos de Usuario</legend>
+		                        <section  id="input-section" class="col-lg-3">
+		                        	<label for="tipo-user">Rol en la Pagina</label>
+			                        <select class="form-control" required>
+			                            <option  value="" selected disabled>Elija una opción</option>}
+			                            <option value="Usuario">Usuario</option>}
+			                            <option value="Admintrador">Administrador</option>}
+			                        </select>
+		                        </section>
 	                </form>
 	            </section>
 	        </section>
-	        <section class="modal-footer">
-	             <button style="background-color:red"id="" type="close" data-dismiss="modal" class= " btn btn-primary btn-md btn-responsive mr-auto" ><span class="   fas fa-angle-double-left"> Cancelar</span></button>
-	             <button onclick="validateForm(form1)" style="background-color:#049304" id="modal-submit"  class= "btn btn-secondary btn-md btn-responsive " > Registrarse <span class="   fas fa-angle-double-right"></span></button>
+	        <section id="este1" class="modal-footer">
+	             <button style="background-color:red"id="" type="close" data-dismiss="modal" class= " btn btn-primary btn-md btn-responsive "data-toggle="tooltip" data-placement="rigth" title="Cancelar" ><span class="   	glyphicon glyphicon-remove"></span></button>
+	             <button onclick="validateForm(form1)" style="background-color:#049304" id="modal-submit"  class= "btn btn-secondary btn-md btn-responsive "data-toggle="tooltip" data-placement="left" title="Registrar" ><span class="  		glyphicon glyphicon-log-in"></span></button>
 	        </section>
 	            </section>
 	        </section>
