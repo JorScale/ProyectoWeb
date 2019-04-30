@@ -239,8 +239,16 @@ aria-hidden="true" data-backdrop="static">
     </form>
     </article>
     <article class="modal-footer">
-      <button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button>
-      <button type="submit" class="btn btn-success" onclick="guardarDatos()">Enviar</button>
+      <span>
+                <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-toggle="tooltip" data-placement="top" title="Cancelar" data-dismiss="modal">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </span> 
+      <span>
+                <button type="submit" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Aceptar">
+                    <i class="glyphicon glyphicon-ok" ></i>
+                </button >
+            </span>
     </article>
   </article>
 </article>
