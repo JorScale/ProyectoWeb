@@ -184,12 +184,21 @@
                 </article>
  			</article>
  		</form>
-            <button type="button" class="btn btn-primary btn-sm" onclick="window.print();" data-toggle="tooltip" data-placement="top" title="Imprimir">Imprimir</button>
+            <section id="Botones" >
+                <button type="button" class="btn btn-primary btn-sm" onclick="imprimir();" data-toggle="tooltip" data-placement="top" title="Imprimir">Imprimir</button>
             <a href="index.html"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Cerrar">Cerrar</button></a>
+            </section>
  	</section>
 
  	<footer> </footer>
 
 
  </body>
+    <script type="text/javascript">
+        function imprimir(){
+        document.getElementById('Botones').style.visibility ='hidden'
+        window.print();
+        document.getElementById('Botones').style.visibility ='visible'
+        }
+    </script>
  </html>		
