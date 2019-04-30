@@ -37,11 +37,11 @@
  				<article class="form-group col-md-1">
  					<img src="../../Imagenes/UTN.png" class="img-thumbnail" id="ImgUTN" />
  				</article>
- 				<article class="form-group col-md-10">
+ 				<article class="form-group col-md-9">
  					<h3>DIRECCIÓN DE GESTIÓN DE DESARROLLO HUMANO</h3>
  					<h3>BOLETA DE SOLICITUD DE VACACIONES</h3>
  				</article>
- 				<article class="form-group col-md-1">
+ 				<article class="form-group col-md-2">
  					<label for="Fecha">N° boleta</label>
  					<input type="text" class="form-control" id="Fecha" value="" readonly>
  				</article>
@@ -185,10 +185,21 @@
                     <input type="text" class="form-control" id="FechaRevision" value="" readonly>
                 </article>
  			</article>
+            <article class="form-row">
+                <article class="form-group col-md-12">
+                    <label for="Observaciones">Observaciones</label>
+                    <br>
+                    <textarea style="resize: none; " ></textarea>
+                </article>
+            </article>
  		</form>
             <section id="Botones" >
-                <button type="button" class="btn btn-primary btn-sm" onclick="imprimir();" data-toggle="tooltip" data-placement="top" title="Imprimir">Imprimir</button>
-            <a href="index.html"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Cerrar">Cerrar</button></a>
+                <button class="btn btn-light btn-sm" id="btnImprimir" onclick="imprimir();" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                    <i class="glyphicon glyphicon-print"></i>
+                </button >
+            <a href="index.html"><button type="button" class="btn btn-danger btn-sm" type="button" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Cerrar">
+                  <i class="glyphicon glyphicon-remove"></i>
+                </button></a>
             </section>
  	</section>
 
