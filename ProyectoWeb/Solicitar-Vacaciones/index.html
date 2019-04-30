@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Vacaciones UTN</title>
+    <title>Solicitud de vacaciones</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="solicitar.css">
@@ -29,6 +29,7 @@
    <script src="../js/moment.js"></script>  
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <!-- <link id="anima" rel="stylesheet" type="text/css" href="../css/application.min.css"> -->
 </head>
@@ -150,7 +151,7 @@
         </article>
         <article class="form-group col-md-3">
           <label for="FechaInicio">Fecha de inicio</label>
-          <input type="date" class="form-control" id="FechaInicio" >
+          <input   onchange="fechacheck();"  type="date" class="form-control" id="FechaInicio" >
         </article>
         <article class="form-group col-md-3">
           <label for="FechaFinal">Fecha de final</label>
@@ -162,18 +163,18 @@
         </article>
 
          
-        <article class="form-group col-md-6  text-right">
+        <article class="form-group col-xs-12 col-md-6 text-sm-center text-md-right">
            
-          <h3 class="text-right">
+          <h3 class="text-sm-center text-md-right">
           Cantidad de días
           </h3>
-          <input onchange="diascheck()" class="text-center" style="font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-right: 65px;" type="number" class="form-control" id="CDias" min="0" >
+          <input onchange="negacheck('CDias')" class="text-center"   type="number" class="form-control" id="CDias" min="0" >
           </article>
-           <article class="form-group col-md-6  text-Left">
-            <h3  class="text-left">
+           <article class="form-group col-xs-12 col-md-6 text-sm-center text-md-left">
+            <h3  class="text-sm-center text-md-left">
           Cantidad de días Disponibles
           </h3>
-          <input class="text-center" style="font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-left: 120px;" type="number" class="form-control" id="CDiasD">
+          <input class="text-center " type="number" class="form-control" id="CDiasD"  readonly="" >
           
          </article>
           
@@ -183,29 +184,29 @@
       <article class="row">
         <article class="form-group col-md-3">
           <label for="Periodo">Período 1</label>
-          <input type="number" class="form-control" id="Periodo" >
+          <input  onchange="negacheck('Periodo1')"  type="number" class="form-control" id="Periodo1" >
         </article>
         <article class="form-group col-md-3">
           <label for="DiasDisfrutar">N° de dias a disfrutar</label>
-          <input type="number" class="form-control" id="2DiasDisfrutar" >
+          <input onchange="negacheck('DiasDisfrutar1')" type="number" class="form-control" id="DiasDisfrutar1" >
         </article>
         <article class="form-group col-md-3">
           <label for="Saldo">Saldo</label>
-          <input type="number" class="form-control" id="Saldo" >
+          <input onchange="negacheck('Saldo1')"  type="number" class="form-control" id="Saldo1" >
         </article>
       </article>
       <article class="row">
         <article class="form-group col-md-3">
           <label for="Periodo">Período 2</label>
-          <input type="number" class="form-control" id="Periodo" >
+          <input onchange="negacheck('Periodo2')" type="number" class="form-control" id="Periodo2" >
         </article>
         <article class="form-group col-md-3">
           <label for="DiasDisfrutar">N° de dias a disfrutar</label>
-          <input type="number" class="form-control" id="1DiasDisfrutar" >
+          <input onchange="negacheck('DiasDisfrutar2')" type="number" class="form-control" id="DiasDisfrutar2" >
         </article>
         <article class="form-group col-md-3">
           <label for="Saldo">Saldo</label>
-          <input type="number" class="form-control" id="Saldo" >
+          <input onchange="negacheck('Saldo2')" type="number" class="form-control" id="Saldo2" >
         </article>
       </article>
       <article class="row">
@@ -216,22 +217,22 @@
         </article>
         <article class="form-group col-md-4">
           <label for="DiasDisfrutar">Cantidad de días que adquiere</label>
-          <input type="number"  class="form-control" id="DiasDisfrutar" >
+          <input onchange="negacheck('DiasDisfrutar3')"   type="number"  class="form-control" id="DiasDisfrutar3" >
         </article>
       </article>
       <h3 style="animation-delay: 1s; -webkit-animation-delay: 1s;" class="animated fadeInUp">VACACIONES PROPORCIONALES</h4>
       <article class="row">
         <article class="form-group col-md-2">
           <label for="Periodo">Período</label>
-          <input type="number" class="form-control" id="Periodo" >
+          <input onchange="negacheck('PeriodoP')" type="number" class="form-control" id="PeriodoP" >
         </article>
         <article class="form-group col-md-2">
           <label for="DiasDisfrutar">N° de dias a disfrutar</label>
-          <input type="number" class="form-control" id="DiasDisfrutar" >
+          <input onchange="negacheck('DiasDisfrutarP')" type="number" class="form-control" id="DiasDisfrutarP" >
         </article>
         <article class="form-group col-md-2">
           <label for="Saldo">Saldo</label>
-          <input type="number" class="form-control" id="Saldo" >
+          <input onchange="negacheck('SaldoP')" type="number" class="form-control" id="SaldoP" >
         </article>
                 <article class="form-group col-md-3">
                     <label for="FechaInicioP">Fecha de inicio</label>
@@ -242,7 +243,7 @@
                     <input type="date" class="form-control" id="FechaFinalP" >
                 </article>
                 <article class="form-group col-md-12  text-center">
-                    <button type="button" style="width: 500px"  class="btn-primary btn-sm" id="btneviar">Enviar</button>
+                    <button type="button" style="width: 100px"  class="btn-primary btn-sm" id="btneviar">Enviar</button>
                     
       
       </article>
@@ -274,7 +275,7 @@
    
   
   <br>
-   <footer class="fixed-bottom">
+   <footer >
       <ul>
         <li>
          <h6><a href="../Politicas/index.html">Politicas de uso</a></h6>
@@ -298,6 +299,26 @@
 
      
     	}
+
+  if($(window).width() > 749) {
+         document.getElementById("CDiasD").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-left: 120px;";
+         document.getElementById("CDias").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-right: 65px;";
+        
+      } 
+        
+
+     if($(window).width() < 749 & $(window).width() > 560 ) {
+      
+         document.getElementById("CDiasD").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px;";
+          document.getElementById("CDias").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px;";
+      } 
+
+     if($(window).width() < 560 ) {
+     	    
+         document.getElementById("CDiasD").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-left: 45%;";
+          document.getElementById("CDias").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-left: 45%; ";
+      } 
+
     	
     </script>
 
@@ -308,7 +329,7 @@
          
           const myDate1 = moment(document.getElementById("FechaInicio").value, 'YYYY-MM-DD').toDate();
           const myDate2 = moment(document.getElementById("FechaFinal").value, 'YYYY-MM-DD').toDate();
-          const myDate3 = moment(moment().add(3, 'days'), 'YYYY-MM-DD').toDate();
+          const myDate3 = moment(moment().add(2, 'days'), 'YYYY-MM-DD').toDate();
 
 
 		  if(myDate2 < myDate1){
@@ -320,7 +341,7 @@
              setTimeout(function() {
  document.getElementById("enlace").href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 }, 2000);
-          }else if(myDate1 <= myDate3){
+          }else if(myDate1 < myDate3){
             document.getElementById("enlace").href = ""; 
           	$("#Modal .modal-body").text('Solo con 3 Dias de Anticipacion');
           	$('#Modal').modal('show');
@@ -358,16 +379,16 @@ setTimeout(function() {
 
 </script>
 <script>
-  function diascheck() {
+  function negacheck(str) {
 
 
 
 
-    if(document.getElementById("CDias").value < 0){
+    if(document.getElementById(str).value < 0){
       $("#Modal .modal-body").text('NO numeros Negativos');
       document.getElementById("enlace").href = ""; 
             $('#Modal').modal('show');
-       document.getElementById("CDias").value = "";
+       document.getElementById(str).value = "";
         
 setTimeout(function() {
  document.getElementById("enlace").href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
@@ -380,7 +401,32 @@ setTimeout(function() {
   }
  
 </script>
+<script>
+  
 
+
+  $(window).on('resize', function() {
+    if($(window).width() > 749) {
+         document.getElementById("CDiasD").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-left: 120px;";
+         document.getElementById("CDias").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-right: 65px;";
+        
+      } 
+        
+
+     if($(window).width() < 749 & $(window).width() > 560 ) {
+      
+         document.getElementById("CDiasD").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px;";
+          document.getElementById("CDias").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px;";
+      } 
+
+     if($(window).width() < 560 ) {
+     	    
+         document.getElementById("CDiasD").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-left: 45%;";
+          document.getElementById("CDias").style = "font-size:20px; font-weight: bold; width: 50px; height: 50px; margin-left: 45%; ";
+      } 
+    
+})
+</script>
 
  
  </body>
