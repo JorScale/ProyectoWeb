@@ -1,56 +1,9 @@
-#titulo-modal {
-    padding:9px 15px;
-    border:2px solid orange;
- 	background-image: linear-gradient(#0D2D6D,#12409b);
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-     border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
- }
- 
- label{
-     color: white;
- }
  #input-section{
  	border:none;
  }
  .form-group{
  	border:hidden;
- }
- #modal-legend{
- 	color:orange;
- 	text-align: center;
-
- }
- #seccion-modal{
- 	border:hidden;
- }
- .modal-body{
-    padding:9px 15px;
-    border:2px solid orange;
- 	background-color :#12409b;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-     border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
- 
- }
- .modal-footer{
-      padding:9px 15px;
-    border:2px solid orange;
- 	background-image: linear-gradient(#12409b,#0D2D6D);
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-     border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
- 
- }
+}
  section #cont-tabla{
     border-style: none;
  }
@@ -65,6 +18,36 @@ table.table-bordered > thead > tr > th{
 table.table-bordered > tbody > tr > td{
     border:1px solid black;
 }
- #h1{
-    color:blue;
- }
+#titulo-modal{
+	height:35px;
+	align-content: center;
+	border: none;
+	color:black;
+}
+#h2{
+	margin: 0;
+	padding: 0;
+}
+#modal-body{
+	border:none;	
+}
+#form1,{
+	border:none; 
+	
+}
+#este1{
+	border-top:none;
+	border:none;
+}
+#modal-legend{
+	border-bottom:2px solid #091951;
+}
+#este{
+  
+}
+.form-container{
+	
+}
+section section{
+	border:none;
+}
