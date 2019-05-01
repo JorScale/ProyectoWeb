@@ -56,7 +56,8 @@
                     	<div class="col-lg-12">
                       <label>Ingrese su codigo asignado:</label>
                       <div class="input-group">
-                      <input type="text" class="form-control form-control-user input-responsive" id="txtCodigo" title="Por favor ingreso el dato solicitado" placeholder="Codigo" required><button id="btnche" type="button"onclick="validar()"><i class="fas fa-check"> </i></button></div>
+                      <input type="text" class="form-control form-control-user input-responsive" id="txtCodigo" title="Por favor ingreso el dato solicitado" placeholder="Codigo" required>
+                       <button data-tooggle="tooltip" data-placement="left" title="Verificar Codigo" id="btnche" type="button"onclick="validar()"><i class="fas fa-check"> </i></button></div>
                       <i class="alerta" id="msj"></i>
                   </div>
                 </div>
@@ -66,7 +67,7 @@
                       <div class="input-group">
 
                       <input type="password" class="form-control form-control-user input-responsive" id="txtPass_1" title="La contraseña debe poseer mayusculas, minusculas y números" placeholder="Contraseña" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="8" disabled="true">
-                      	<button type="button" id="btn_1" onclick="ver(1)" disabled="true"><img id="img_1" src="../Iconos/v1.png" width="25" height="25"></button>
+                      	<button id="S_1" data-tooggle="tooltip" data-placement="left" title="Mostrar Contraseña" type="button" id="btn_1" onclick="ver(1)" disabled="true"><img id="img_1" src="../Iconos/v1.png" width="25" height="25"></button>
                       </div>
                       </div>
                   </div>
@@ -76,12 +77,12 @@
                       <div class="input-group">
                       <input type="password" class="form-control form-control-user input-responsive" id="txtPass_2" title="La contraseña debe poseer mayusculas, minusculas y números" placeholder="Contraseña" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="8" disabled="true">
                       
-                      <button type="button" id="btn_2" onclick="ver(2)" disabled="true"><img id="img_2" src="../Iconos/v1.png" width="25" height="25"></button>
+                      <button id="S_2" data-tooggle="tooltip" data-placement="left" title="Mostrar Contraseña" type="button" id="btn_2" onclick="ver(2)" disabled="true"><img id="img_2" src="../Iconos/v1.png" width="25" height="25"></button>
                   </div>
                   </div>
                     </div>
                     
-                    <button id="btnActializa" disabled="true" type="submit" class="btn btn-primary btn-md btn-responsive btn-block"><i class="fas fa-location-arrow fa-fw"></i> Actualizar</button>
+                    <button data-tooggle="tooltip" data-placement="left" title="Actualizar" id="btnActializa" disabled="true" type="submit" class="btn btn-primary btn-md btn-responsive btn-block"><i class="fas fa-location-arrow fa-fw"></i> Actualizar</button>
                   </form>
               </div>
             </div>
@@ -110,7 +111,7 @@
             <h5 class="text-uppercase">Correos<br> </h5>
             <ul class="list-unstyled">
               <li>
-                <a class="titulo" href="mailto:soporte.guanacaste@utn.ac.cr" class="correo">soporte.guanacaste@utn.ac.cr</a>              
+                <a data-tooggle="tooltip" data-placement="left" title="Soporte Tecnico" class="titulo" href="mailto:soporte.guanacaste@utn.ac.cr" class="correo">soporte.guanacaste@utn.ac.cr</a>              
               </li>
           </div>
           <div class="col-md-3 mb-md-0 mb-3">
@@ -118,7 +119,7 @@
             <h5 class="text-uppercase">Telefonos<br> </h5>
             <ul class="list-unstyled">
               <li>
-               <div class="item-contact"><a class="titulo" href="tel:+506 2668 3500"><span class="link-id"></span><span>+506 2668 3500</span></a></div>
+               <div data-tooggle="tooltip" data-placement="left" title="UTN Sede Cañas" class="item-contact"><a class="titulo" href="tel:+506 2668 3500"><span class="link-id"></span><span>+506 2668 3500</span></a></div>
             
               </li>
           </div>
