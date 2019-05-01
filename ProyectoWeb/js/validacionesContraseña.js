@@ -101,10 +101,10 @@ function usuario(){
 var texto= document.getElementById('txtUsuario').value;
 	if(texto ==""){
 		document.getElementById('mensaje').innerText="Campo Obligatorio";
-		document.getElementById('btnBusca').href="#";
+		//document.getElementById('btnBusca').href="#";
 	}else{
 		document.getElementById('mensaje').innerText="";
-		document.getElementById('btnBusca').href='../Cambio-Contraseña/index.html';
+		//document.getElementById('btnBusca').href='../Cambio-Contraseña/index.html';
 	}
 
 }
