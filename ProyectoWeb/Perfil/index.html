@@ -56,9 +56,12 @@
                 </li>
                 </ul>
         </article>
-    </nav class="text-center">
+    </nav >
+       <section class="text-center">
+       	    <h1 class="text-info text-center py-4"> Vacaciones UTN </h1>
+       </section>
 
-        <h1 class="text-info text-center py-5"> Vacaciones UTN </h1>
+        
 
     </header><!-- /header -->
 
@@ -199,8 +202,16 @@
                   </form>  
                 </section>
                 <footer class="modal-footer mx-5">
-                  <button type="button" data-dismiss="modal" class="btn btn-secondary btn-responsive">Cancelar</button>
-                  <button type="submit" class="btn btn-success ml-4 btn-responsive">Guardar</button>
+                  <button id="boton1" style="background-color:red" type="button" data-dismiss="modal" class="btn btn-secondary btn-responsive">
+                  	    <span class="glyphicon glyphicon-remove"data-toggle=tooltip data-html=true class="float-left ml-3" 
+			            title='<p>Cerrar edición</p>'
+			            data-placement='top'></span>
+                  </button>
+                  <button type="submit" class="btn btn-success ml-4 btn-responsive">
+                  	     <span class="glyphicon glyphicon-ok" data-toggle=tooltip data-html=true class="float-left ml-3" 
+			            title='<p>Guardar edición</p>'
+			            data-placement='top'></span>
+                  </button>
                 </footer>
               </article>
             </section>
