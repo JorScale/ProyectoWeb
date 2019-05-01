@@ -71,9 +71,11 @@ alert("Las contraseñas no son iguales, por favor verifique que sean iguales o d
 function ver(n){
 	if (document.getElementById('txtPass_'+n).type=='password') {
 		document.getElementById('txtPass_'+n).type='text';
+		document.getElementById("S_"+n).title="Ocultar Contraseña";
 		document.getElementById('img_'+n).src='../Iconos/v2.png'
 	}else{
 		document.getElementById('txtPass_'+n).type='password';
+		document.getElementById("S_"+n).title="Mostrar Contraseña";
 		document.getElementById('img_'+n).src='../Iconos/v1.png'
 	}
 }
