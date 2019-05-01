@@ -278,7 +278,7 @@
         </li>
       </ul>
     </footer>
-    <!-- Modal contraseña-->
+<!-- Modal contraseña-->
              <section class="modal fade" id="clave" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"data-backdrop="static" data-keboard="false">
             <section class="modal-dialog" role="form">
               <section class="modal-content">   
@@ -293,60 +293,71 @@
                   <!--Form-->
                   <form id="formulario" action="" onsubmit="return verifica()" onclick="valida()" method="get">
                 
-                    <div class="col-lg-5">
-                      <div class="p-5">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-xs-12 col-md-4">
-                              <div class="form-group">
+                    <section class="col-lg-5">
+                      <section class="p-5">
+
+                        <section class="container">
+                          <section class="row">
+                            <section class="col-xs-12 col-md-4">
+                              <section class="form-group">
                                 <label class="etiqueta" for="oldpass">Contraseña Actual</label>
-                                <div class="input-group">
+                                <section class="input-group">
                                   <input height="50" type="password" oninvalid="setCustimValidity('La contrseña es invalida')" class="form-control" placeholder="Contraseña Actual" id="pass_1" 
                                   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="8" required>
                                   <span id="S_1" data-tooggle="tooltip" data-placement="left" title="Mostrar Contraseña" class="input-group-addon" onclick="cambiar(1)"><img id="img_1" src="../Imagenes/v1.png" width="20" height="20"></span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                                </section>
+                              </section>
+                            </section>
+                          </section>
+                        </section>
 
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-xs-12 col-md-4">
-                              <div class="form-group">
+                        <section class="container">
+                          <section class="row">
+                            <section class="col-xs-12 col-md-4">
+                              <section class="form-group">
                                 <label class="etiqueta" for="oldpass">Nueva Contraseña</label>
-                                  <div class="input-group">
+                                  <section class="input-group">
                                     <input height="50" type="password" class="form-control" placeholder="Nueva Contraseña" 
                                     id="pass_2" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"  minlength="8" required>
                                     <span id="S_2" data-tooggle="tooltip" data-placement="left" title="Mostrar Contraseña" class="input-group-addon" onclick="cambiar(2)"><img id="img_2" src="../Imagenes/v1.png" width="20" height="20"></span>
-                                  </div>
+                                  </section>
                                   <i class="alerta" id="msj2"></i>
-                              </div>
-                           </div>
-                         </div>
-                        </div>
+                              </section>
+                           </section>
+                         </section>
+                        </section>
 
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-xs-12 col-md-4">
-                              <div class="form-group">
+                        <section class="container">
+                          <section class="row">
+                            <section class="col-xs-12 col-md-4">
+                              <section class="form-group">
                                 <label class="etiqueta" for="repitpass">Confirmar Contraseña</label>
-                                <div class="input-group">
+                                <section class="input-group">
                                   <input height="50" type="password" class="form-control" placeholder="Confirmar Contraseña" 
                                   id="pass_3" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"  minlength="8" required>
                                   <span id="S_3" data-tooggle="tooltip" data-placement="left" title="Mostrar Contraseña" class="input-group-addon" onclick="cambiar(3)"><img id="img_3" src="../Imagenes/v1.png" width="20" height="20"></span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <section class="clearfix"></section>
+                                </section>
+                              </section>
+                            </section>
+                          </section>
+                        </section>
+
+                        <section class="container">
+                          <section class="row">
+                            <section class="col-xs-12 col-md-4">
+                              <section class="form-group">
                           <section align="right">                       
                         <button data-tooggle="tooltip" data-placement="left" title="Actualizar" type="submit" class="btn btn-success btn-md btn-responsive"> <span class="fas fa-user-check"></span></button>
                         <button data-tooggle="tooltip" data-placement="left" title="Cancelar" type="reset" class="btn btn-danger btn-md btn-responsive" data-dismiss="modal" onclick="defecto()"> <span class="fas fa-times-circle"></span></button>
                       </section>
-                      </div>
-                    </div>
+                    </section>
+                  </section>
+                </section>
+                    </section>
+
+                      </section>
+                    </section>
+                    
                   </form>
                 </section>
               </section>
