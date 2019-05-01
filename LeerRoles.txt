@@ -24,7 +24,7 @@ que las agreguen el link en sus modulos.
 
 9-Anulación-vacaciones(Ashley).
 
-10-Restablecer-Clave(Katherine).
+10-Cambio-Contraseña(Katherine).
 
 11-Registrar-Usuario(Rodrigo).
 
