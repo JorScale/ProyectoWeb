@@ -1,0 +1,56 @@
+#header-container {
+background-color: #fff;
+}
+
+#restablece-contra{
+	color: #0D2D6D;
+}
+
+#boton{
+	background: linear-gradient(#0D2D6D, #0D47A1)	;
+	border-color: #0D2D6D;
+
+}
+
+#card-header{
+	margin-top: 4px;
+	background: linear-gradient(#f2f2f2, #fff);
+	text-align: center;
+	color: #fff;
+	background:  #0D47A1; 
+}
+
+
+#IMG {
+	width: auto;
+	height: auto;
+	margin-top: 6px;
+}
+
+
+#form-card{
+background: linear-gradient(#f2f2f2, #fff);
+}
+
+body{
+background: linear-gradient(#0D2D6D, #0D47A1);
+}
+
+footer small{
+color: #fff;
+font-size: 14px;
+}
+
+footer.container-fluid{
+text-align: center;
+}
+
+a{
+color: #fff;
+
+}
+
+a:hover{
+color: #fff;
+}
+
